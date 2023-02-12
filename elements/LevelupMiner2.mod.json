@@ -1,0 +1,76 @@
+{
+  "_fv": 34,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 320,
+    "height": 170,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "netherite_pickaxe1.png",
+          "use1Xscale": true,
+          "name": "netherite_pickaxe1.png",
+          "x": 159,
+          "y": 80
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Divin",
+          "onClick": {
+            "name": "MinerLevel4"
+          },
+          "displayCondition": {
+            "name": "MinerLevel4button"
+          },
+          "width": 51,
+          "height": 20,
+          "name": "Divin",
+          "x": 177,
+          "y": 53
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "50 niveaux",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "50 niveaux",
+          "x": 177,
+          "y": 170
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Retour",
+          "onClick": {
+            "name": "PreviousPageMiner"
+          },
+          "width": 56,
+          "height": 20,
+          "name": "Retour",
+          "x": 312,
+          "y": 179
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

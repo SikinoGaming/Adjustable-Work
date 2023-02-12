@@ -1,0 +1,12 @@
+{
+  "heartbeatpulse": {
+    "category": "player",
+    "subtitle": "subtitles.heartbeatpulse",
+    "sounds": [
+      {
+        "name": "adjustable_work:heartbeat_sound",
+        "stream": false
+      }
+    ]
+  }
+}

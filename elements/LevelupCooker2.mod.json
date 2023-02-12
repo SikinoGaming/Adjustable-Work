@@ -1,0 +1,76 @@
+{
+  "_fv": 34,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "pomme_en_or1.png",
+          "use1Xscale": true,
+          "name": "pomme_en_or1.png",
+          "x": 171,
+          "y": 73
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Divin",
+          "onClick": {
+            "name": "CookerLevel4"
+          },
+          "displayCondition": {
+            "name": "CookerLevel4button"
+          },
+          "width": 51,
+          "height": 20,
+          "name": "Divin",
+          "x": 187,
+          "y": 46
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "50 niveaux",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "50 niveaux",
+          "x": 186,
+          "y": 164
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Retour",
+          "onClick": {
+            "name": "PreviousPageCooker"
+          },
+          "width": 56,
+          "height": 20,
+          "name": "Retour",
+          "x": 238,
+          "y": 177
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

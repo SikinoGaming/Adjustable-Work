@@ -1,0 +1,156 @@
+{
+  "_fv": 34,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 320,
+    "height": 180,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "bread.png",
+          "use1Xscale": true,
+          "name": "bread.png",
+          "x": 60,
+          "y": 80
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Basique",
+          "onClick": {
+            "name": "CookerLevel1"
+          },
+          "displayCondition": {
+            "name": "CookerLevel1button"
+          },
+          "width": 61,
+          "height": 20,
+          "name": "Basique",
+          "x": 69,
+          "y": 53
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "10 niveaux",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "10 niveaux",
+          "x": 69,
+          "y": 170
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "soup.png",
+          "use1Xscale": true,
+          "name": "soup.png",
+          "x": 132,
+          "y": 62
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Avancé",
+          "onClick": {
+            "name": "CookerLevel2"
+          },
+          "displayCondition": {
+            "name": "CookerLevel2button"
+          },
+          "width": 56,
+          "height": 20,
+          "name": "Avancé",
+          "x": 159,
+          "y": 53
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "20 niveaux",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "20 niveaux",
+          "x": 159,
+          "y": 170
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Profesionnel",
+          "onClick": {
+            "name": "CookerLevel3"
+          },
+          "displayCondition": {
+            "name": "CookerLevel3button"
+          },
+          "width": 88,
+          "height": 20,
+          "name": "Profesionnel",
+          "x": 240,
+          "y": 53
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "cooked_beef.png",
+          "use1Xscale": true,
+          "name": "cooked_beef.png",
+          "x": 240,
+          "y": 80
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "30 niveaux",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "30 niveaux",
+          "x": 258,
+          "y": 170
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Suivant",
+          "onClick": {
+            "name": "NextPageCooker"
+          },
+          "width": 61,
+          "height": 20,
+          "name": "Suivant",
+          "x": 307,
+          "y": 185
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

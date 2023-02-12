@@ -1,0 +1,15 @@
+{
+  "_fv": 34,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "LSHIFT",
+    "keyBindingName": "Agent Shift",
+    "keyBindingCategoryKey": "misc",
+    "onKeyPressed": {
+      "name": "ShiftClicking"
+    },
+    "onKeyReleased": {
+      "name": "ShiftClikingReleasing"
+    }
+  }
+}

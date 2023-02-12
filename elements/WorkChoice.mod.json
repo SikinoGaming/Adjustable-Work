@@ -1,0 +1,147 @@
+{
+  "_fv": 34,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 240,
+    "height": 170,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Séléctionne ton métier :",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "name": "Séléctionne ton métier :",
+          "x": 150,
+          "y": 53
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "  Mineur ",
+          "onClick": {
+            "name": "MinerJobAssignation"
+          },
+          "width": 71,
+          "height": 20,
+          "name": "  Mineur ",
+          "x": 231,
+          "y": 71
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": " Fermier ",
+          "onClick": {
+            "name": "FarmerJobAssignation"
+          },
+          "width": 71,
+          "height": 20,
+          "name": " Fermier ",
+          "x": 231,
+          "y": 98
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": " Pêcheur ",
+          "onClick": {
+            "name": "FishermanJobAssignation"
+          },
+          "width": 71,
+          "height": 20,
+          "name": " Pêcheur ",
+          "x": 231,
+          "y": 125
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Architecte",
+          "onClick": {
+            "name": "ArchitectJobAssignation"
+          },
+          "width": 77,
+          "height": 20,
+          "name": "Architecte",
+          "x": 123,
+          "y": 152
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Ingénieur ",
+          "onClick": {
+            "name": "EngineerJobAssignation"
+          },
+          "width": 77,
+          "height": 20,
+          "name": "Ingénieur ",
+          "x": 123,
+          "y": 125
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "   Mage   ",
+          "onClick": {
+            "name": "MageJobAssignation"
+          },
+          "width": 76,
+          "height": 20,
+          "name": "   Mage   ",
+          "x": 123,
+          "y": 98
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Cuisinier ",
+          "onClick": {
+            "name": "CookerJobAsignation"
+          },
+          "width": 77,
+          "height": 20,
+          "name": "Cuisinier ",
+          "x": 123,
+          "y": 71
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "  Agent  ",
+          "onClick": {
+            "name": "AgentJobAssignation"
+          },
+          "width": 71,
+          "height": 20,
+          "name": "  Agent  ",
+          "x": 231,
+          "y": 152
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

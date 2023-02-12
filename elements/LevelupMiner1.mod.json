@@ -1,0 +1,156 @@
+{
+  "_fv": 34,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 320,
+    "height": 170,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "stone_pickaxe1.png",
+          "use1Xscale": true,
+          "name": "stone_pickaxe1.png",
+          "x": 60,
+          "y": 80
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "10 niveaux",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "10 niveaux",
+          "x": 78,
+          "y": 170
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Basique",
+          "onClick": {
+            "name": "MinerLevel1"
+          },
+          "displayCondition": {
+            "name": "MinerLevel1button"
+          },
+          "width": 61,
+          "height": 20,
+          "name": "Basique",
+          "x": 78,
+          "y": 53
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "iron_pickaxe1.png",
+          "use1Xscale": true,
+          "name": "iron_pickaxe1.png",
+          "x": 150,
+          "y": 80
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Avancé",
+          "onClick": {
+            "name": "MinerLevel2"
+          },
+          "displayCondition": {
+            "name": "MinerLevel2button"
+          },
+          "width": 56,
+          "height": 20,
+          "name": "Avancé",
+          "x": 168,
+          "y": 53
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "20 niveaux",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "20 niveaux",
+          "x": 168,
+          "y": 170
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "diamond_pickaxe1.png",
+          "use1Xscale": true,
+          "name": "diamond_pickaxe1.png",
+          "x": 249,
+          "y": 80
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Professionel",
+          "onClick": {
+            "name": "MinerLevel3"
+          },
+          "displayCondition": {
+            "name": "MineLevel3button"
+          },
+          "width": 88,
+          "height": 20,
+          "name": "Professionel",
+          "x": 249,
+          "y": 53
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "30 niveaux",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "30 niveaux",
+          "x": 263,
+          "y": 170
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "suivant",
+          "onClick": {
+            "name": "NextPageMiner"
+          },
+          "width": 56,
+          "height": 20,
+          "name": "suivant",
+          "x": 313,
+          "y": 181
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

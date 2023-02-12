@@ -1,0 +1,12 @@
+{
+  "_fv": 34,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "J",
+    "keyBindingName": "Open Work Gui",
+    "keyBindingCategoryKey": "inventory",
+    "onKeyPressed": {
+      "name": "OpenWorkGuiProcedure"
+    }
+  }
+}

@@ -564,7 +564,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "levelup_miner_1",
-      "path": "~/LevelUpArborescence/Miner/Gui"
+      "path": "~/LevelUpArborescence/Gui"
     },
     {
       "name": "FarmerCraftingRestriction",
@@ -594,7 +594,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "levelup_miner_2",
-      "path": "~/LevelUpArborescence/Miner/Gui"
+      "path": "~/LevelUpArborescence/Gui"
     },
     {
       "name": "MinerLevel1",
@@ -767,7 +767,7 @@
           }
         ]
       },
-      "path": "~/LevelUpArborescence/Miner/Gui"
+      "path": "~/LevelUpArborescence/Gui"
     },
     {
       "name": "PreviousPageMiner",
@@ -800,7 +800,7 @@
           }
         ]
       },
-      "path": "~/LevelUpArborescence/Miner/Gui"
+      "path": "~/LevelUpArborescence/Gui"
     },
     {
       "name": "MinerSmeltingRestrictions",
@@ -847,7 +847,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "levelup_farmer_1",
-      "path": "~/LevelUpArborescence/Farmer/Gui"
+      "path": "~/LevelUpArborescence/Farmer"
     },
     {
       "name": "LevelupFarmer2",
@@ -856,7 +856,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "levelup_farmer_2",
-      "path": "~/LevelUpArborescence/Farmer/Gui"
+      "path": "~/LevelUpArborescence/Farmer"
     },
     {
       "name": "FarmerLevel1",
@@ -909,160 +909,6 @@
         ]
       },
       "path": "~/LevelUpArborescence/Farmer"
-    },
-    {
-      "name": "FarmerLevel2button",
-      "type": "procedure",
-      "sortid": 53,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "farmer_level_2button",
-      "metadata": {
-        "return_type": "logic",
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/LevelUpArborescence/Farmer"
-    },
-    {
-      "name": "FarmerLevel3",
-      "type": "procedure",
-      "sortid": 54,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "farmer_level_3",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/LevelUpArborescence/Farmer"
-    },
-    {
-      "name": "FarmerLevel3button",
-      "type": "procedure",
-      "sortid": 55,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "farmer_level_3button",
-      "metadata": {
-        "return_type": "logic",
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/LevelUpArborescence/Farmer"
-    },
-    {
-      "name": "FarmerLevel4",
-      "type": "procedure",
-      "sortid": 56,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "farmer_level_4",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/LevelUpArborescence/Farmer"
-    },
-    {
-      "name": "FarmerLevel4button",
-      "type": "procedure",
-      "sortid": 57,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "farmer_level_4button",
-      "metadata": {
-        "return_type": "logic",
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/LevelUpArborescence/Farmer"
-    },
-    {
-      "name": "NextPageFarmer",
-      "type": "procedure",
-      "sortid": 58,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "next_page_farmer",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/LevelUpArborescence/Farmer/Gui"
-    },
-    {
-      "name": "PreviousPageFarmer",
-      "type": "procedure",
-      "sortid": 59,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "previous_page_farmer",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/LevelUpArborescence/Farmer/Gui"
     }
   ],
   "variable_elements": [
@@ -1201,21 +1047,15 @@
           },
           {
             "name": "Miner",
-            "children": [
-              {
-                "name": "Gui",
-                "children": []
-              }
-            ]
+            "children": []
           },
           {
             "name": "Farmer",
-            "children": [
-              {
-                "name": "Gui",
-                "children": []
-              }
-            ]
+            "children": []
+          },
+          {
+            "name": "Gui",
+            "children": []
           }
         ]
       },

@@ -564,7 +564,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "levelup_miner_1",
-      "path": "~/LevelUpArborescence/Miner/Gui"
+      "path": "~/LevelUpArborescence/Gui"
     },
     {
       "name": "FarmerCraftingRestriction",
@@ -594,7 +594,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "levelup_miner_2",
-      "path": "~/LevelUpArborescence/Miner/Gui"
+      "path": "~/LevelUpArborescence/Gui"
     },
     {
       "name": "MinerLevel1",
@@ -767,7 +767,7 @@
           }
         ]
       },
-      "path": "~/LevelUpArborescence/Miner/Gui"
+      "path": "~/LevelUpArborescence/Gui"
     },
     {
       "name": "PreviousPageMiner",
@@ -800,7 +800,7 @@
           }
         ]
       },
-      "path": "~/LevelUpArborescence/Miner/Gui"
+      "path": "~/LevelUpArborescence/Gui"
     },
     {
       "name": "MinerSmeltingRestrictions",
@@ -1030,39 +1030,6 @@
         ]
       },
       "path": "~/LevelUpArborescence/Farmer/Gui"
-    },
-    {
-      "name": "PreviousPageFarmer",
-      "type": "procedure",
-      "sortid": 59,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "previous_page_farmer",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/LevelUpArborescence/Farmer/Gui"
     }
   ],
   "variable_elements": [
@@ -1201,12 +1168,7 @@
           },
           {
             "name": "Miner",
-            "children": [
-              {
-                "name": "Gui",
-                "children": []
-              }
-            ]
+            "children": []
           },
           {
             "name": "Farmer",
@@ -1216,6 +1178,10 @@
                 "children": []
               }
             ]
+          },
+          {
+            "name": "Gui",
+            "children": []
           }
         ]
       },

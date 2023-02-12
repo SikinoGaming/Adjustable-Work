@@ -1,0 +1,62 @@
+{
+  "_fv": 34,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 320,
+    "height": 170,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "netherite_hoe.png",
+          "use1Xscale": true,
+          "name": "netherite_hoe.png",
+          "x": 169,
+          "y": 79
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Divin",
+          "onClick": {
+            "name": "FarmerLevel4"
+          },
+          "displayCondition": {
+            "name": "FarmerLevel4button"
+          },
+          "width": 51,
+          "height": 20,
+          "name": "Divin",
+          "x": 184,
+          "y": 47
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "50 niveaux",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "50 niveaux",
+          "x": 183,
+          "y": 169
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

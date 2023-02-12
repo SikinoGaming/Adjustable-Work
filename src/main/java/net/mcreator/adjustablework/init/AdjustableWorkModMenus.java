@@ -14,6 +14,7 @@ import net.minecraft.world.inventory.MenuType;
 import net.mcreator.adjustablework.world.inventory.WorkChoiceMenu;
 import net.mcreator.adjustablework.world.inventory.LevelupMiner2Menu;
 import net.mcreator.adjustablework.world.inventory.LevelupMiner1Menu;
+import net.mcreator.adjustablework.world.inventory.LevelupFarmer2Menu;
 import net.mcreator.adjustablework.world.inventory.LevelupFarmer1Menu;
 import net.mcreator.adjustablework.world.inventory.LevelupCooker2Menu;
 import net.mcreator.adjustablework.world.inventory.LevelupCooker1Menu;
@@ -33,4 +34,6 @@ public class AdjustableWorkModMenus {
 			() -> IForgeMenuType.create(LevelupMiner2Menu::new));
 	public static final RegistryObject<MenuType<LevelupFarmer1Menu>> LEVELUP_FARMER_1 = REGISTRY.register("levelup_farmer_1",
 			() -> IForgeMenuType.create(LevelupFarmer1Menu::new));
+	public static final RegistryObject<MenuType<LevelupFarmer2Menu>> LEVELUP_FARMER_2 = REGISTRY.register("levelup_farmer_2",
+			() -> IForgeMenuType.create(LevelupFarmer2Menu::new));
 }

@@ -14,6 +14,7 @@ import net.minecraft.client.gui.screens.MenuScreens;
 import net.mcreator.adjustablework.client.gui.WorkChoiceScreen;
 import net.mcreator.adjustablework.client.gui.LevelupMiner2Screen;
 import net.mcreator.adjustablework.client.gui.LevelupMiner1Screen;
+import net.mcreator.adjustablework.client.gui.LevelupFarmer2Screen;
 import net.mcreator.adjustablework.client.gui.LevelupFarmer1Screen;
 import net.mcreator.adjustablework.client.gui.LevelupCooker2Screen;
 import net.mcreator.adjustablework.client.gui.LevelupCooker1Screen;
@@ -29,6 +30,7 @@ public class AdjustableWorkModScreens {
 			MenuScreens.register(AdjustableWorkModMenus.LEVELUP_MINER_1.get(), LevelupMiner1Screen::new);
 			MenuScreens.register(AdjustableWorkModMenus.LEVELUP_MINER_2.get(), LevelupMiner2Screen::new);
 			MenuScreens.register(AdjustableWorkModMenus.LEVELUP_FARMER_1.get(), LevelupFarmer1Screen::new);
+			MenuScreens.register(AdjustableWorkModMenus.LEVELUP_FARMER_2.get(), LevelupFarmer2Screen::new);
 		});
 	}
 }

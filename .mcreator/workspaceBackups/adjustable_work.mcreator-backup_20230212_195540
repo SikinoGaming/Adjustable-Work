@@ -564,7 +564,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "levelup_miner_1",
-      "path": "~/LevelUpArborescence/Gui"
+      "path": "~/LevelUpArborescence/Miner/Gui"
     },
     {
       "name": "FarmerCraftingRestriction",
@@ -594,7 +594,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "levelup_miner_2",
-      "path": "~/LevelUpArborescence/Gui"
+      "path": "~/LevelUpArborescence/Miner/Gui"
     },
     {
       "name": "MinerLevel1",
@@ -767,7 +767,7 @@
           }
         ]
       },
-      "path": "~/LevelUpArborescence/Gui"
+      "path": "~/LevelUpArborescence/Miner/Gui"
     },
     {
       "name": "PreviousPageMiner",
@@ -800,7 +800,7 @@
           }
         ]
       },
-      "path": "~/LevelUpArborescence/Gui"
+      "path": "~/LevelUpArborescence/Miner/Gui"
     },
     {
       "name": "MinerSmeltingRestrictions",
@@ -1030,6 +1030,55 @@
         ]
       },
       "path": "~/LevelUpArborescence/Farmer/Gui"
+    },
+    {
+      "name": "PreviousPageFarmer",
+      "type": "procedure",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "previous_page_farmer",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/LevelUpArborescence/Farmer/Gui"
+    },
+    {
+      "name": "Camomille",
+      "type": "plant",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "camomille"
+    },
+    {
+      "name": "ShatteredLuminous",
+      "type": "item",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shattered_luminous"
     }
   ],
   "variable_elements": [
@@ -1120,9 +1169,11 @@
     "en_us": {
       "key.adjustable_work.open_work_gui": "Open Work Gui",
       "subtitles.heart_beat_pulse": "",
+      "item.adjustable_work.shattered_luminous": "Eclat Lumineux",
       "item.adjustable_work.reset_job": "Reset Job",
       "effect.adjustable_work.depht_illnes": "Ivresse des profondeurs",
-      "subtitles.heartbeatpulse": "a single beat"
+      "subtitles.heartbeatpulse": "a single beat",
+      "block.adjustable_work.camomille": "Arbrisoleil"
     }
   },
   "foldersRoot": {
@@ -1168,7 +1219,12 @@
           },
           {
             "name": "Miner",
-            "children": []
+            "children": [
+              {
+                "name": "Gui",
+                "children": []
+              }
+            ]
           },
           {
             "name": "Farmer",
@@ -1178,10 +1234,6 @@
                 "children": []
               }
             ]
-          },
-          {
-            "name": "Gui",
-            "children": []
           }
         ]
       },

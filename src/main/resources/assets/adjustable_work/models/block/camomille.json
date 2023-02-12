@@ -1,0 +1,8 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "adjustable_work:blocks/arbrisoleil1",
+    "particle": "adjustable_work:blocks/arbrisoleil1"
+  },
+  "render_type": "cutout"
+}

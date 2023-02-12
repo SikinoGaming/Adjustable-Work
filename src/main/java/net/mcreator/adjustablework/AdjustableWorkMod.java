@@ -33,6 +33,9 @@ import net.mcreator.adjustablework.init.AdjustableWorkModSounds;
 import net.mcreator.adjustablework.init.AdjustableWorkModMobEffects;
 import net.mcreator.adjustablework.init.AdjustableWorkModMenus;
 import net.mcreator.adjustablework.init.AdjustableWorkModItems;
+import net.mcreator.adjustablework.init.AdjustableWorkModFeatures;
+import net.mcreator.adjustablework.init.AdjustableWorkModBlocks;
+import net.mcreator.adjustablework.init.AdjustableWorkModBlockEntities;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -51,8 +54,11 @@ public class AdjustableWorkMod {
 
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 		AdjustableWorkModSounds.REGISTRY.register(bus);
-
+		AdjustableWorkModBlocks.REGISTRY.register(bus);
 		AdjustableWorkModItems.REGISTRY.register(bus);
+
+		AdjustableWorkModBlockEntities.REGISTRY.register(bus);
+		AdjustableWorkModFeatures.REGISTRY.register(bus);
 
 		AdjustableWorkModMobEffects.REGISTRY.register(bus);
 

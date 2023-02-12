@@ -12,6 +12,7 @@ import net.minecraftforge.common.extensions.IForgeMenuType;
 import net.minecraft.world.inventory.MenuType;
 
 import net.mcreator.adjustablework.world.inventory.WorkChoiceMenu;
+import net.mcreator.adjustablework.world.inventory.PrimaryBrewingStandGuiMenu;
 import net.mcreator.adjustablework.world.inventory.LevelupMiner2Menu;
 import net.mcreator.adjustablework.world.inventory.LevelupMiner1Menu;
 import net.mcreator.adjustablework.world.inventory.LevelupFarmer2Menu;
@@ -36,4 +37,6 @@ public class AdjustableWorkModMenus {
 			() -> IForgeMenuType.create(LevelupFarmer1Menu::new));
 	public static final RegistryObject<MenuType<LevelupFarmer2Menu>> LEVELUP_FARMER_2 = REGISTRY.register("levelup_farmer_2",
 			() -> IForgeMenuType.create(LevelupFarmer2Menu::new));
+	public static final RegistryObject<MenuType<PrimaryBrewingStandGuiMenu>> PRIMARY_BREWING_STAND_GUI = REGISTRY
+			.register("primary_brewing_stand_gui", () -> IForgeMenuType.create(PrimaryBrewingStandGuiMenu::new));
 }

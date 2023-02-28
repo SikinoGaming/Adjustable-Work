@@ -1070,7 +1070,8 @@
       "sortid": 60,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "camomille"
+      "registry_name": "camomille",
+      "path": "~/ItemElement/Mage"
     },
     {
       "name": "ShatteredLuminous",
@@ -1078,7 +1079,56 @@
       "sortid": 61,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "shattered_luminous"
+      "registry_name": "shattered_luminous",
+      "path": "~/ItemElement/Mage"
+    },
+    {
+      "name": "BasicBrewingStandCraft",
+      "type": "recipe",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "basic_brewing_stand_craft",
+      "path": "~/ItemElement/Mage"
+    },
+    {
+      "name": "ShatteredBLazePowder",
+      "type": "recipe",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shattered_b_laze_powder",
+      "path": "~/ItemElement/Mage"
+    },
+    {
+      "name": "AkwardPotionLuminous",
+      "type": "recipe",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "akward_potion_luminous",
+      "path": "~/ItemElement/Mage"
+    },
+    {
+      "name": "PreventBrewingStandUsing",
+      "type": "procedure",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "prevent_brewing_stand_using",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Restrictions"
     }
   ],
   "variable_elements": [
@@ -1240,6 +1290,15 @@
       {
         "name": "Debug_Item",
         "children": []
+      },
+      {
+        "name": "ItemElement",
+        "children": [
+          {
+            "name": "Mage",
+            "children": []
+          }
+        ]
       }
     ]
   },

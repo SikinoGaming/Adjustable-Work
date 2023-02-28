@@ -22,8 +22,6 @@ public class AdjustableWorkModItems {
 	public static final RegistryObject<Item> RESET_JOB = REGISTRY.register("reset_job", () -> new ResetJobItem());
 	public static final RegistryObject<Item> CAMOMILLE = block(AdjustableWorkModBlocks.CAMOMILLE, CreativeModeTab.TAB_DECORATIONS);
 	public static final RegistryObject<Item> SHATTERED_LUMINOUS = REGISTRY.register("shattered_luminous", () -> new ShatteredLuminousItem());
-	public static final RegistryObject<Item> PRIMARY_BREWING_STAND = block(AdjustableWorkModBlocks.PRIMARY_BREWING_STAND,
-			CreativeModeTab.TAB_BUILDING_BLOCKS);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

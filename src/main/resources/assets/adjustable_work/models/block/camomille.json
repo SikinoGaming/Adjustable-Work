@@ -1,8 +1,8 @@
 {
   "parent": "block/cross",
   "textures": {
-    "cross": "adjustable_work:blocks/arbrisoleil1",
-    "particle": "adjustable_work:blocks/arbrisoleil1"
+    "cross": "adjustable_work:blocks/fleur2",
+    "particle": "adjustable_work:blocks/fleur2"
   },
   "render_type": "cutout"
 }

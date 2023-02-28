@@ -1,11 +1,8 @@
 
 package net.mcreator.adjustablework.potion;
 
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffect;
-
-import net.mcreator.adjustablework.procedures.DephtIllnessApplicationProcedure;
 
 public class DephtIllnesMobEffect extends MobEffect {
 	public DephtIllnesMobEffect() {
@@ -20,11 +17,6 @@ public class DephtIllnesMobEffect extends MobEffect {
 	@Override
 	public boolean isInstantenous() {
 		return true;
-	}
-
-	@Override
-	public void applyEffectTick(LivingEntity entity, int amplifier) {
-		DephtIllnessApplicationProcedure.execute(entity.level, entity);
 	}
 
 	@Override

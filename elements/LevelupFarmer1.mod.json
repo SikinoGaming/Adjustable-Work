@@ -138,6 +138,9 @@
         "type": "button",
         "data": {
           "text": "Suivant",
+          "onClick": {
+            "name": "NextPageFarmer"
+          },
           "width": 51,
           "height": 20,
           "name": "Suivant",

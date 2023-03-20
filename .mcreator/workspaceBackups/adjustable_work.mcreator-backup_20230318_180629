@@ -876,6 +876,21 @@
       "path": "~/LevelUpArborescence/Farmer"
     },
     {
+<<<<<<<< HEAD:.mcreator/workspaceBackups/adjustable_work.mcreator-backup_20230212_184345
+      "name": "CookerCraftingModdedRestrictions",
+      "type": "procedure",
+      "sortid": 49,
+      "compiles": false,
+      "locked_code": true,
+      "registry_name": "cooker_crafting_modded_restrictions",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+========
       "name": "FarmerLevel1button",
       "type": "procedure",
       "sortid": 51,
@@ -886,11 +901,23 @@
         "return_type": "logic",
         "dependencies": [
           {
+>>>>>>>> dd364527e756b377febbf3747bd6aa54bddc1abb:.mcreator/workspaceBackups/adjustable_work.mcreator-backup_20230223_155304
             "name": "entity",
             "type": "entity"
           }
         ]
       },
+<<<<<<<< HEAD:.mcreator/workspaceBackups/adjustable_work.mcreator-backup_20230212_184345
+      "path": "~/Restrictions/Cooker"
+    },
+    {
+      "name": "LetsCook",
+      "type": "procedure",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lets_cook",
+========
       "path": "~/LevelUpArborescence/Farmer"
     },
     {
@@ -1116,6 +1143,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "prevent_brewing_stand_using",
+>>>>>>>> dd364527e756b377febbf3747bd6aa54bddc1abb:.mcreator/workspaceBackups/adjustable_work.mcreator-backup_20230223_155304
       "metadata": {
         "dependencies": [
           {
@@ -1123,12 +1151,28 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
         ]
       },
+<<<<<<<< HEAD:.mcreator/workspaceBackups/adjustable_work.mcreator-backup_20230212_184345
+      "path": "~/Restrictions/Cooker"
+========
       "path": "~/Restrictions/Mage"
+<<<<<<< HEAD:.mcreator/workspaceBackups/adjustable_work.mcreator-backup_20230318_180629
     },
     {
       "name": "PreventEnchantingTable",
@@ -1138,18 +1182,100 @@
       "locked_code": false,
       "registry_name": "prevent_enchanting_table",
       "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Restrictions/Mage"
+    },
+    {
+      "name": "LevelUpMage1",
+      "type": "gui",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "level_up_mage_1",
+      "path": "~/LevelUpArborescence/Cooker/Gui"
+    },
+    {
+      "name": "LevelupMage",
+      "type": "gui",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "levelup_mage",
+      "path": "~/LevelUpArborescence/Mage/Gui"
+    },
+    {
+      "name": "MageLevel1",
+      "type": "procedure",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mage_level_1",
+      "metadata": {
         "dependencies": [
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
-      "path": "~/Restrictions/Mage"
+      "path": "~/LevelUpArborescence/Mage"
+    },
+    {
+      "name": "MageLevel2",
+      "type": "procedure",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mage_level_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/LevelUpArborescence/Mage"
+    },
+    {
+      "name": "MageLevel1button",
+      "type": "procedure",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mage_level_1button",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/LevelUpArborescence/Mage"
+    },
+    {
+      "name": "MageLevel2button",
+      "type": "procedure",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mage_level_2button",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/LevelUpArborescence/Mage"
+=======
+>>>>>>>> dd364527e756b377febbf3747bd6aa54bddc1abb:.mcreator/workspaceBackups/adjustable_work.mcreator-backup_20230223_155304
+>>>>>>> 5009a7deeb0a6065686337e3efde33b662380d4f:.mcreator/workspaceBackups/adjustable_work.mcreator-backup_20230223_155304
     }
   ],
   "variable_elements": [
@@ -1312,7 +1438,12 @@
           },
           {
             "name": "Mage",
-            "children": []
+            "children": [
+              {
+                "name": "Gui",
+                "children": []
+              }
+            ]
           }
         ]
       },

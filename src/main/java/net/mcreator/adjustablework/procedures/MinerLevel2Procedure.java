@@ -9,7 +9,9 @@ public class MinerLevel2Procedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		if (20 <= (entity instanceof Player _plr ? _plr.experienceLevel : 0)) {
+		if (20 <= (entity instanceof Player _plr ? _plr.experienceLevel : 0)
+				&& 1 == (entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new AdjustableWorkModVariables.PlayerVariables())).MinerLevel) {
 			if (entity instanceof Player _player)
 				_player.giveExperienceLevels(-(20));
 			{

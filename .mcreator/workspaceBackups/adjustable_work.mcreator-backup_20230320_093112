@@ -6,14 +6,7 @@
       "sortid": 1,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "work_choice",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/network/WorkChoiceButtonMessage.java",
-          "src/main/java/net/mcreator/adjustablework/client/gui/WorkChoiceScreen.java",
-          "src/main/java/net/mcreator/adjustablework/world/inventory/WorkChoiceMenu.java"
-        ]
-      }
+      "registry_name": "work_choice"
     },
     {
       "name": "JobAsignation",
@@ -23,9 +16,6 @@
       "locked_code": false,
       "registry_name": "job_asignation",
       "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/procedures/JobAsignationProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -59,9 +49,6 @@
       "locked_code": false,
       "registry_name": "cooker_job_asignation",
       "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/procedures/CookerJobAsignationProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -79,9 +66,6 @@
       "locked_code": false,
       "registry_name": "mage_job_assignation",
       "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/procedures/MageJobAssignationProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -99,9 +83,6 @@
       "locked_code": false,
       "registry_name": "engineer_job_assignation",
       "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/procedures/EngineerJobAssignationProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -119,9 +100,6 @@
       "locked_code": false,
       "registry_name": "architect_job_assignation",
       "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/procedures/ArchitectJobAssignationProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -139,9 +117,6 @@
       "locked_code": false,
       "registry_name": "miner_job_assignation",
       "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/procedures/MinerJobAssignationProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -159,9 +134,6 @@
       "locked_code": false,
       "registry_name": "farmer_job_assignation",
       "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/procedures/FarmerJobAssignationProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -179,9 +151,6 @@
       "locked_code": false,
       "registry_name": "fisherman_job_assignation",
       "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/procedures/FishermanJobAssignationProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -199,9 +168,6 @@
       "locked_code": false,
       "registry_name": "agent_job_assignation",
       "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/procedures/AgentJobAssignationProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -218,11 +184,6 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "depht_illnes",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/potion/DephtIllnesMobEffect.java"
-        ]
-      },
       "path": "~/Restrictions/Miner/Depht Illness"
     },
     {
@@ -233,9 +194,6 @@
       "locked_code": false,
       "registry_name": "depht_illness_application",
       "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/procedures/DephtIllnessApplicationProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -257,9 +215,6 @@
       "locked_code": false,
       "registry_name": "cooker_crafting_restrictions",
       "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/procedures/CookerCraftingRestrictionsProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -280,13 +235,6 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "levelup_cooker_1",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/network/LevelupCooker1ButtonMessage.java",
-          "src/main/java/net/mcreator/adjustablework/world/inventory/LevelupCooker1Menu.java",
-          "src/main/java/net/mcreator/adjustablework/client/gui/LevelupCooker1Screen.java"
-        ]
-      },
       "path": "~/LevelUpArborescence/Cooker/Gui"
     },
     {
@@ -296,13 +244,6 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "levelup_cooker_2",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/network/LevelupCooker2ButtonMessage.java",
-          "src/main/java/net/mcreator/adjustablework/client/gui/LevelupCooker2Screen.java",
-          "src/main/java/net/mcreator/adjustablework/world/inventory/LevelupCooker2Menu.java"
-        ]
-      },
       "path": "~/LevelUpArborescence/Cooker/Gui"
     },
     {
@@ -313,9 +254,6 @@
       "locked_code": false,
       "registry_name": "next_page_cooker",
       "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/procedures/NextPageCookerProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -349,9 +287,6 @@
       "locked_code": false,
       "registry_name": "previous_page_cooker",
       "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/procedures/PreviousPageCookerProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -385,9 +320,6 @@
       "locked_code": false,
       "registry_name": "open_work_gui_procedure",
       "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/procedures/OpenWorkGuiProcedureProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -420,11 +352,6 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "open_work_gui",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/network/OpenWorkGuiMessage.java"
-        ]
-      },
       "path": "~/LevelUpArborescence"
     },
     {
@@ -435,9 +362,6 @@
       "locked_code": false,
       "registry_name": "reset_job_rightclicked",
       "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/procedures/ResetJobRightclickedProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -470,12 +394,6 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "reset_job",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/item/ResetJobItem.java",
-          "src/main/resources/assets/adjustable_work/models/item/reset_job.json"
-        ]
-      },
       "path": "~/Debug_Item"
     },
     {
@@ -486,9 +404,6 @@
       "locked_code": false,
       "registry_name": "cooker_level_1",
       "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/procedures/CookerLevel1Procedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -507,9 +422,6 @@
       "registry_name": "cooker_level_1button",
       "metadata": {
         "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/procedures/CookerLevel1buttonProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -527,9 +439,6 @@
       "locked_code": false,
       "registry_name": "cooker_level_2",
       "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/procedures/CookerLevel2Procedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -548,9 +457,6 @@
       "registry_name": "cooker_level_2button",
       "metadata": {
         "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/procedures/CookerLevel2buttonProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -568,9 +474,6 @@
       "locked_code": false,
       "registry_name": "cooker_level_3",
       "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/procedures/CookerLevel3Procedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -589,9 +492,6 @@
       "registry_name": "cooker_level_3button",
       "metadata": {
         "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/procedures/CookerLevel3buttonProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -609,9 +509,6 @@
       "locked_code": false,
       "registry_name": "cooker_level_4",
       "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/procedures/CookerLevel4Procedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -630,9 +527,6 @@
       "registry_name": "cooker_level_4button",
       "metadata": {
         "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/procedures/CookerLevel4buttonProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -650,9 +544,6 @@
       "locked_code": false,
       "registry_name": "cooker_smelting_restrictions",
       "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/procedures/CookerSmeltingRestrictionsProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -673,13 +564,6 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "levelup_miner_1",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/world/inventory/LevelupMiner1Menu.java",
-          "src/main/java/net/mcreator/adjustablework/client/gui/LevelupMiner1Screen.java",
-          "src/main/java/net/mcreator/adjustablework/network/LevelupMiner1ButtonMessage.java"
-        ]
-      },
       "path": "~/LevelUpArborescence/Miner/Gui"
     },
     {
@@ -690,9 +574,6 @@
       "locked_code": false,
       "registry_name": "farmer_crafting_restriction",
       "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/procedures/FarmerCraftingRestrictionProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -713,13 +594,6 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "levelup_miner_2",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/network/LevelupMiner2ButtonMessage.java",
-          "src/main/java/net/mcreator/adjustablework/world/inventory/LevelupMiner2Menu.java",
-          "src/main/java/net/mcreator/adjustablework/client/gui/LevelupMiner2Screen.java"
-        ]
-      },
       "path": "~/LevelUpArborescence/Miner/Gui"
     },
     {
@@ -730,9 +604,6 @@
       "locked_code": false,
       "registry_name": "miner_level_1",
       "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/procedures/MinerLevel1Procedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -751,9 +622,6 @@
       "registry_name": "miner_level_1button",
       "metadata": {
         "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/procedures/MinerLevel1buttonProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -771,9 +639,6 @@
       "locked_code": false,
       "registry_name": "miner_level_2",
       "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/procedures/MinerLevel2Procedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -792,9 +657,6 @@
       "registry_name": "miner_level_2button",
       "metadata": {
         "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/procedures/MinerLevel2buttonProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -812,9 +674,6 @@
       "locked_code": false,
       "registry_name": "miner_level_3",
       "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/procedures/MinerLevel3Procedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -833,9 +692,6 @@
       "registry_name": "mine_level_3button",
       "metadata": {
         "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/procedures/MineLevel3buttonProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -853,9 +709,6 @@
       "locked_code": false,
       "registry_name": "miner_level_4",
       "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/procedures/MinerLevel4Procedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -874,9 +727,6 @@
       "registry_name": "miner_level_4button",
       "metadata": {
         "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/procedures/MinerLevel4buttonProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -894,9 +744,6 @@
       "locked_code": false,
       "registry_name": "next_page_miner",
       "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/procedures/NextPageMinerProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -930,9 +777,6 @@
       "locked_code": false,
       "registry_name": "previous_page_miner",
       "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/procedures/PreviousPageMinerProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -966,9 +810,6 @@
       "locked_code": false,
       "registry_name": "miner_smelting_restrictions",
       "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/procedures/MinerSmeltingRestrictionsProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -983,60 +824,6 @@
       "path": "~/Restrictions/Miner"
     },
     {
-      "name": "ShiftClicking",
-      "type": "procedure",
-      "sortid": 45,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "shift_clicking",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/procedures/ShiftClickingProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Debug_Item"
-    },
-    {
-      "name": "ShiftClikingReleasing",
-      "type": "procedure",
-      "sortid": 46,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "shift_cliking_releasing",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/procedures/ShiftClikingReleasingProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Debug_Item"
-    },
-    {
-      "name": "AgentShift",
-      "type": "keybind",
-      "sortid": 45,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "agent_shift",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/network/AgentShiftMessage.java"
-        ]
-      },
-      "path": "~/Debug_Item"
-    },
-    {
       "name": "FarmerCultivatingRestriction",
       "type": "procedure",
       "sortid": 47,
@@ -1044,9 +831,6 @@
       "locked_code": false,
       "registry_name": "farmer_cultivating_restriction",
       "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/procedures/FarmerCultivatingRestrictionProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -1063,30 +847,35 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "levelup_farmer_1",
+      "path": "~/LevelUpArborescence/Farmer/Gui"
+    },
+    {
+      "name": "LevelupFarmer2",
+      "type": "gui",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "levelup_farmer_2",
+      "path": "~/LevelUpArborescence/Farmer/Gui"
+    },
+    {
+      "name": "FarmerLevel1",
+      "type": "procedure",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "farmer_level_1",
       "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/client/gui/LevelupFarmer1Screen.java",
-          "src/main/java/net/mcreator/adjustablework/world/inventory/LevelupFarmer1Menu.java"
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
         ]
       },
       "path": "~/LevelUpArborescence/Farmer"
     },
     {
-<<<<<<<< HEAD:.mcreator/workspaceBackups/adjustable_work.mcreator-backup_20230320_094710
-      "name": "CookerCraftingModdedRestrictions",
-      "type": "procedure",
-      "sortid": 49,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "cooker_crafting_modded_restrictions",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "blockstate",
-            "type": "blockstate"
-          },
-          {
-========
       "name": "FarmerLevel1button",
       "type": "procedure",
       "sortid": 51,
@@ -1097,23 +886,11 @@
         "return_type": "logic",
         "dependencies": [
           {
->>>>>>>> 1ac83b69c224475a77eefe6677d9ccaefd5300dd:.mcreator/workspaceBackups/adjustable_work.mcreator-backup_20230318_183959
             "name": "entity",
             "type": "entity"
           }
         ]
       },
-<<<<<<<< HEAD:.mcreator/workspaceBackups/adjustable_work.mcreator-backup_20230320_094710
-      "path": "~/Restrictions/Cooker"
-    },
-    {
-      "name": "LetsCook",
-      "type": "procedure",
-      "sortid": 50,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "lets_cook",
-========
       "path": "~/LevelUpArborescence/Farmer"
     },
     {
@@ -1339,11 +1116,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "prevent_brewing_stand_using",
->>>>>>>> 1ac83b69c224475a77eefe6677d9ccaefd5300dd:.mcreator/workspaceBackups/adjustable_work.mcreator-backup_20230318_183959
       "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adjustablework/procedures/LetsCookProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -1367,9 +1140,6 @@
           }
         ]
       },
-<<<<<<<< HEAD:.mcreator/workspaceBackups/adjustable_work.mcreator-backup_20230320_094710
-      "path": "~/Restrictions/Cooker"
-========
       "path": "~/Restrictions/Mage"
     },
     {
@@ -1483,7 +1253,6 @@
         ]
       },
       "path": "~/LevelUpArborescence/Mage"
->>>>>>>> 1ac83b69c224475a77eefe6677d9ccaefd5300dd:.mcreator/workspaceBackups/adjustable_work.mcreator-backup_20230318_183959
     }
   ],
   "variable_elements": [
@@ -1578,41 +1347,13 @@
   ],
   "language_map": {
     "en_us": {
-      "gui.adjustable_work.work_choice.button_ingenieur": "Ingénieur ",
-      "item.adjustable_work.reset_job": "Reset Job",
-      "gui.adjustable_work.levelup_miner_2.button_divin": "Divin",
-      "gui.adjustable_work.levelup_miner_1.button_basique": "Basique",
-      "gui.adjustable_work.work_choice.button_mineur": "  Mineur ",
-      "gui.adjustable_work.levelup_miner_1.button_professionel": "Professionel",
-      "gui.adjustable_work.levelup_cooker_1.label_30_niveaux": "30 niveaux",
-      "gui.adjustable_work.work_choice.button_pecheur": " Pêcheur ",
-      "gui.adjustable_work.levelup_miner_1.label_10_niveaux": "10 niveaux",
-      "gui.adjustable_work.work_choice.button_cuisinier": "Cuisinier ",
       "key.adjustable_work.open_work_gui": "Open Work Gui",
       "subtitles.heart_beat_pulse": "",
-      "gui.adjustable_work.levelup_cooker_1.label_10_niveaux": "10 niveaux",
-      "key.adjustable_work.agent_shift": "Agent Shift",
-      "gui.adjustable_work.levelup_cooker_2.label_50_niveaux": "50 niveaux",
-      "gui.adjustable_work.work_choice.button_agent": "  Agent  ",
-      "subtitles.heartbeatpulse": "a single beat",
-      "gui.adjustable_work.levelup_cooker_1.button_profesionnel": "Profesionnel",
-      "gui.adjustable_work.levelup_miner_1.label_20_niveaux": "20 niveaux",
-      "gui.adjustable_work.levelup_cooker_2.button_divin": "Divin",
+      "item.adjustable_work.shattered_luminous": "Eclat Lumineux",
+      "item.adjustable_work.reset_job": "Reset Job",
       "effect.adjustable_work.depht_illnes": "Ivresse des profondeurs",
-      "gui.adjustable_work.work_choice.button_mage": "   Mage   ",
-      "gui.adjustable_work.levelup_cooker_2.button_retour": "Retour",
-      "gui.adjustable_work.levelup_cooker_1.button_avance": "Avancé",
-      "gui.adjustable_work.levelup_cooker_1.button_suivant": "Suivant",
-      "gui.adjustable_work.levelup_miner_1.label_30_niveaux": "30 niveaux",
-      "gui.adjustable_work.levelup_miner_1.button_suivant": "suivant",
-      "gui.adjustable_work.levelup_miner_2.button_retour": "Retour",
-      "gui.adjustable_work.levelup_miner_2.label_50_niveaux": "50 niveaux",
-      "gui.adjustable_work.levelup_miner_1.button_avance": "Avancé",
-      "gui.adjustable_work.work_choice.button_architecte": "Architecte",
-      "gui.adjustable_work.work_choice.label_selectionne_ton_metier": "Séléctionne ton métier :",
-      "gui.adjustable_work.levelup_cooker_1.label_20_niveaux": "20 niveaux",
-      "gui.adjustable_work.work_choice.button_fermier": " Fermier ",
-      "gui.adjustable_work.levelup_cooker_1.button_basique": "Basique"
+      "subtitles.heartbeatpulse": "a single beat",
+      "block.adjustable_work.camomille": "Arbrisoleil"
     }
   },
   "foldersRoot": {
@@ -1641,6 +1382,10 @@
                 "children": []
               }
             ]
+          },
+          {
+            "name": "Mage",
+            "children": []
           }
         ]
       },
@@ -1667,9 +1412,6 @@
           },
           {
             "name": "Farmer",
-<<<<<<<< HEAD:.mcreator/workspaceBackups/adjustable_work.mcreator-backup_20230320_094710
-            "children": []
-========
             "children": [
               {
                 "name": "Gui",
@@ -1685,13 +1427,21 @@
                 "children": []
               }
             ]
->>>>>>>> 1ac83b69c224475a77eefe6677d9ccaefd5300dd:.mcreator/workspaceBackups/adjustable_work.mcreator-backup_20230318_183959
           }
         ]
       },
       {
         "name": "Debug_Item",
         "children": []
+      },
+      {
+        "name": "ItemElement",
+        "children": [
+          {
+            "name": "Mage",
+            "children": []
+          }
+        ]
       }
     ]
   },
@@ -1715,5 +1465,5 @@
     "modElementsPackage": "net.mcreator.adjustablework",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202300110610
+  "mcreatorVersion": 202200348217
 }

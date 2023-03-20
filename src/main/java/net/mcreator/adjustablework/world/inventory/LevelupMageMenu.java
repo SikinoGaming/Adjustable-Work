@@ -13,14 +13,13 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.adjustablework.procedures.LoopProcedure;
 import net.mcreator.adjustablework.init.AdjustableWorkModMenus;
 
 import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
 
-public class WorkChoiceMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
+public class LevelupMageMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
 	public final static HashMap<String, Object> guistate = new HashMap<>();
 	public final Level world;
 	public final Player entity;
@@ -29,8 +28,8 @@ public class WorkChoiceMenu extends AbstractContainerMenu implements Supplier<Ma
 	private final Map<Integer, Slot> customSlots = new HashMap<>();
 	private boolean bound = false;
 
-	public WorkChoiceMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-		super(AdjustableWorkModMenus.WORK_CHOICE.get(), id);
+	public LevelupMageMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
+		super(AdjustableWorkModMenus.LEVELUP_MAGE.get(), id);
 		this.entity = inv.player;
 		this.world = inv.player.level;
 		this.internal = new ItemStackHandler(0);
@@ -51,12 +50,6 @@ public class WorkChoiceMenu extends AbstractContainerMenu implements Supplier<Ma
 	@Override
 	public ItemStack quickMoveStack(Player playerIn, int index) {
 		return ItemStack.EMPTY;
-	}
-
-	@Override
-	public void removed(Player playerIn) {
-		super.removed(playerIn);
-		LoopProcedure.execute(world, x, y, z, entity);
 	}
 
 	public Map<Integer, Slot> get() {

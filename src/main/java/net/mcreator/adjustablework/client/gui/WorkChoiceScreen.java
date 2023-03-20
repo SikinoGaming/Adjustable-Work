@@ -128,10 +128,15 @@ public class WorkChoiceScreen extends AbstractContainerScreen<WorkChoiceMenu> {
 				AdjustableWorkMod.PACKET_HANDLER.sendToServer(new WorkChoiceButtonMessage(4, x, y, z));
 				WorkChoiceButtonMessage.handleButtonAction(entity, 4, x, y, z);
 			}
+<<<<<<< HEAD
+		}));
+		this.addRenderableWidget(new Button(this.leftPos + 29, this.topPos + 63, 76, 20, Component.literal("Forgemage"), e -> {
+=======
 		});
 		guistate.put("button:button_ingenieur", button_ingenieur);
 		this.addRenderableWidget(button_ingenieur);
 		button_mage = new Button(this.leftPos + 29, this.topPos + 63, 76, 20, Component.translatable("gui.adjustable_work.work_choice.button_mage"), e -> {
+>>>>>>> 5009a7deeb0a6065686337e3efde33b662380d4f
 			if (true) {
 				AdjustableWorkMod.PACKET_HANDLER.sendToServer(new WorkChoiceButtonMessage(5, x, y, z));
 				WorkChoiceButtonMessage.handleButtonAction(entity, 5, x, y, z);

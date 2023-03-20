@@ -11,6 +11,7 @@
   "gui.adjustable_work.work_choice.button_cuisinier": "Cuisinier ",
   "key.adjustable_work.open_work_gui": "Open Work Gui",
   "subtitles.heart_beat_pulse": "",
+<<<<<<< HEAD
   "gui.adjustable_work.levelup_cooker_1.label_10_niveaux": "10 niveaux",
   "key.adjustable_work.agent_shift": "Agent Shift",
   "gui.adjustable_work.levelup_cooker_2.label_50_niveaux": "50 niveaux",
@@ -34,4 +35,11 @@
   "gui.adjustable_work.levelup_cooker_1.label_20_niveaux": "20 niveaux",
   "gui.adjustable_work.work_choice.button_fermier": " Fermier ",
   "gui.adjustable_work.levelup_cooker_1.button_basique": "Basique"
+=======
+  "item.adjustable_work.shattered_luminous": "Eclat Lumineux",
+  "item.adjustable_work.reset_job": "Reset Job",
+  "effect.adjustable_work.depht_illnes": "Ivresse des profondeurs",
+  "subtitles.heartbeatpulse": "a single beat",
+  "block.adjustable_work.camomille": "Arbrisoleil"
+>>>>>>> dd364527e756b377febbf3747bd6aa54bddc1abb
 }

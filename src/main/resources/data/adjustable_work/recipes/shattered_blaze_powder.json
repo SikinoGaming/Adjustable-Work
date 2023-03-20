@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "adjustable_work:shattered_luminous"
+    }
+  ],
+  "result": {
+    "item": "minecraft:blaze_powder",
+    "count": 1
+  }
+}

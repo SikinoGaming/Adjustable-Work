@@ -17,6 +17,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.adjustablework.network.AdjustableWorkModVariables;
+import net.mcreator.adjustablework.init.AdjustableWorkModMobEffects;
 
 import javax.annotation.Nullable;
 
@@ -39,6 +40,8 @@ public class DephtIllnessApplicationProcedure {
 		if (entity.getY() < 45) {
 			if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AdjustableWorkModVariables.PlayerVariables())).MinerLevel < 1) {
 				if (entity instanceof LivingEntity _entity)
+					_entity.addEffect(new MobEffectInstance(AdjustableWorkModMobEffects.DEPHT_ILLNES.get(), 40, 1, (false), (false)));
+				if (entity instanceof LivingEntity _entity)
 					_entity.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 40, 1, (false), (false)));
 				if (30 <= AdjustableWorkModVariables.MapVariables.get(world).TickDephtIllnessCooldown && !(entity.getDisplayName().getString()).equals("Lucrenne")) {
 					if (world instanceof Level _level) {
@@ -56,6 +59,8 @@ public class DephtIllnessApplicationProcedure {
 				}
 			} else {
 				if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AdjustableWorkModVariables.PlayerVariables())).MinerLevel < 2 && entity.getY() < 15) {
+					if (entity instanceof LivingEntity _entity)
+						_entity.addEffect(new MobEffectInstance(AdjustableWorkModMobEffects.DEPHT_ILLNES.get(), 40, 1, (false), (false)));
 					if (entity instanceof LivingEntity _entity)
 						_entity.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 40, 1, (false), (false)));
 					if (30 <= AdjustableWorkModVariables.MapVariables.get(world).TickDephtIllnessCooldown && !(entity.getDisplayName().getString()).equals("Lucrenne")) {
@@ -75,6 +80,8 @@ public class DephtIllnessApplicationProcedure {
 				} else {
 					if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AdjustableWorkModVariables.PlayerVariables())).MinerLevel < 3 && entity.getY() < -15) {
 						if (entity instanceof LivingEntity _entity)
+							_entity.addEffect(new MobEffectInstance(AdjustableWorkModMobEffects.DEPHT_ILLNES.get(), 40, 1, (false), (false)));
+						if (entity instanceof LivingEntity _entity)
 							_entity.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 40, 1, (false), (false)));
 						if (30 <= AdjustableWorkModVariables.MapVariables.get(world).TickDephtIllnessCooldown && !(entity.getDisplayName().getString()).equals("Lucrenne")) {
 							if (world instanceof Level _level) {
@@ -92,6 +99,8 @@ public class DephtIllnessApplicationProcedure {
 						}
 					} else {
 						if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AdjustableWorkModVariables.PlayerVariables())).MinerLevel < 4 && entity.getY() < -45) {
+							if (entity instanceof LivingEntity _entity)
+								_entity.addEffect(new MobEffectInstance(AdjustableWorkModMobEffects.DEPHT_ILLNES.get(), 40, 1, (false), (false)));
 							if (entity instanceof LivingEntity _entity)
 								_entity.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 40, 1, (false), (false)));
 							if (30 <= AdjustableWorkModVariables.MapVariables.get(world).TickDephtIllnessCooldown && !(entity.getDisplayName().getString()).equals("Lucrenne")) {

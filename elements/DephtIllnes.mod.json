@@ -3,7 +3,7 @@
   "_type": "potioneffect",
   "definition": {
     "effectName": "Ivresse des profondeurs",
-    "icon": "placeholder320x320.png",
+    "icon": "dephtillness1.png",
     "color": {
       "value": -1,
       "falpha": 0.0
@@ -12,9 +12,6 @@
     "isBad": false,
     "isBenefitical": false,
     "renderStatusInInventory": true,
-    "renderStatusInHUD": true,
-    "onActiveTick": {
-      "name": "DephtIllnessApplication"
-    }
+    "renderStatusInHUD": true
   }
 }

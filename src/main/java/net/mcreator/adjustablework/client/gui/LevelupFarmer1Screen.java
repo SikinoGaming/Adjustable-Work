@@ -1,4 +1,3 @@
-
 package net.mcreator.adjustablework.client.gui;
 
 import net.minecraft.world.level.Level;

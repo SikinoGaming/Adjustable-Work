@@ -28,58 +28,39 @@ public class CookerSmeltingRestrictionsProcedure {
 	private static void execute(@Nullable Event event, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
-		if (((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new AdjustableWorkModVariables.PlayerVariables())).Work).equals("Cooker")
-				&& (itemstack.getItem() == Items.COOKED_BEEF || itemstack.getItem() == Items.COOKED_SALMON
-						|| itemstack.getItem() == Items.COOKED_PORKCHOP || itemstack.getItem() == Items.COOKED_MUTTON
-						|| itemstack.getItem() == Items.BAKED_POTATO || itemstack.getItem() == Items.COOKED_CHICKEN
-						|| itemstack.getItem() == Items.COOKED_COD || itemstack.getItem() == Items.COOKED_RABBIT
-						|| itemstack.getItem() == Items.DRIED_KELP || itemstack.getItem() == Items.COOKED_CHICKEN)) {
-			if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new AdjustableWorkModVariables.PlayerVariables())).CookerLevel < 1) {
+		if (((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AdjustableWorkModVariables.PlayerVariables())).Work).equals("Cooker") && (itemstack.getItem() == Items.COOKED_BEEF
+				|| itemstack.getItem() == Items.COOKED_SALMON || itemstack.getItem() == Items.COOKED_PORKCHOP || itemstack.getItem() == Items.COOKED_MUTTON || itemstack.getItem() == Items.BAKED_POTATO || itemstack.getItem() == Items.COOKED_CHICKEN
+				|| itemstack.getItem() == Items.COOKED_COD || itemstack.getItem() == Items.COOKED_RABBIT || itemstack.getItem() == Items.DRIED_KELP || itemstack.getItem() == Items.COOKED_CHICKEN)) {
+			if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AdjustableWorkModVariables.PlayerVariables())).CookerLevel < 1) {
 				if (entity instanceof Player _player) {
 					ItemStack _stktoremove = (itemstack.copy());
-					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
-							_player.inventoryMenu.getCraftSlots());
+					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 				}
 			} else {
-				if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new AdjustableWorkModVariables.PlayerVariables())).CookerLevel < 2
-						&& (itemstack.getItem() == Items.COOKED_BEEF || itemstack.getItem() == Items.COOKED_SALMON
-								|| itemstack.getItem() == Items.COOKED_PORKCHOP || itemstack.getItem() == Items.COOKED_MUTTON
-								|| itemstack.getItem() == Items.BAKED_POTATO || itemstack.getItem() == Items.COOKED_CHICKEN
-								|| itemstack.getItem() == Items.COOKED_COD || itemstack.getItem() == Items.COOKED_RABBIT
-								|| itemstack.getItem() == Items.COOKED_CHICKEN)) {
+				if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AdjustableWorkModVariables.PlayerVariables())).CookerLevel < 2 && (itemstack.getItem() == Items.COOKED_BEEF
+						|| itemstack.getItem() == Items.COOKED_SALMON || itemstack.getItem() == Items.COOKED_PORKCHOP || itemstack.getItem() == Items.COOKED_MUTTON || itemstack.getItem() == Items.BAKED_POTATO
+						|| itemstack.getItem() == Items.COOKED_CHICKEN || itemstack.getItem() == Items.COOKED_COD || itemstack.getItem() == Items.COOKED_RABBIT || itemstack.getItem() == Items.COOKED_CHICKEN)) {
 					if (entity instanceof Player _player) {
 						ItemStack _stktoremove = (itemstack.copy());
-						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
-								_player.inventoryMenu.getCraftSlots());
+						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 					}
 				} else {
-					if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-							.orElse(new AdjustableWorkModVariables.PlayerVariables())).CookerLevel < 3
-							&& (itemstack.getItem() == Items.COOKED_BEEF || itemstack.getItem() == Items.COOKED_SALMON
-									|| itemstack.getItem() == Items.COOKED_PORKCHOP || itemstack.getItem() == Items.COOKED_MUTTON
-									|| itemstack.getItem() == Items.COOKED_CHICKEN || itemstack.getItem() == Items.COOKED_COD
-									|| itemstack.getItem() == Items.COOKED_RABBIT || itemstack.getItem() == Items.COOKED_CHICKEN)) {
+					if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AdjustableWorkModVariables.PlayerVariables())).CookerLevel < 3
+							&& (itemstack.getItem() == Items.COOKED_BEEF || itemstack.getItem() == Items.COOKED_SALMON || itemstack.getItem() == Items.COOKED_PORKCHOP || itemstack.getItem() == Items.COOKED_MUTTON
+									|| itemstack.getItem() == Items.COOKED_CHICKEN || itemstack.getItem() == Items.COOKED_COD || itemstack.getItem() == Items.COOKED_RABBIT || itemstack.getItem() == Items.COOKED_CHICKEN)) {
 						if (entity instanceof Player _player) {
 							ItemStack _stktoremove = (itemstack.copy());
-							_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
-									_player.inventoryMenu.getCraftSlots());
+							_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 						}
 					}
 				}
 			}
 		} else {
-			if (itemstack.getItem() == Items.COOKED_BEEF || itemstack.getItem() == Items.COOKED_SALMON || itemstack.getItem() == Items.COOKED_PORKCHOP
-					|| itemstack.getItem() == Items.COOKED_MUTTON || itemstack.getItem() == Items.BAKED_POTATO
-					|| itemstack.getItem() == Items.COOKED_CHICKEN || itemstack.getItem() == Items.COOKED_COD
-					|| itemstack.getItem() == Items.COOKED_RABBIT || itemstack.getItem() == Items.DRIED_KELP
-					|| itemstack.getItem() == Items.COOKED_CHICKEN) {
+			if (itemstack.getItem() == Items.COOKED_BEEF || itemstack.getItem() == Items.COOKED_SALMON || itemstack.getItem() == Items.COOKED_PORKCHOP || itemstack.getItem() == Items.COOKED_MUTTON || itemstack.getItem() == Items.BAKED_POTATO
+					|| itemstack.getItem() == Items.COOKED_CHICKEN || itemstack.getItem() == Items.COOKED_COD || itemstack.getItem() == Items.COOKED_RABBIT || itemstack.getItem() == Items.DRIED_KELP || itemstack.getItem() == Items.COOKED_CHICKEN) {
 				if (entity instanceof Player _player) {
 					ItemStack _stktoremove = (itemstack.copy());
-					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
-							_player.inventoryMenu.getCraftSlots());
+					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 				}
 			}
 		}

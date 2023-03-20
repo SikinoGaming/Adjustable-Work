@@ -1,4 +1,3 @@
-
 package net.mcreator.adjustablework.client.gui;
 
 import net.minecraft.world.level.Level;
@@ -27,6 +26,10 @@ public class LevelupCooker1Screen extends AbstractContainerScreen<LevelupCooker1
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	Button button_basique;
+	Button button_avance;
+	Button button_profesionnel;
+	Button button_suivant;
 
 	public LevelupCooker1Screen(LevelupCooker1Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -84,9 +87,9 @@ public class LevelupCooker1Screen extends AbstractContainerScreen<LevelupCooker1
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "10 niveaux", 15, 140, -12829636);
-		this.font.draw(poseStack, "20 niveaux", 105, 140, -12829636);
-		this.font.draw(poseStack, "30 niveaux", 204, 140, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.adjustable_work.levelup_cooker_1.label_10_niveaux"), 15, 140, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.adjustable_work.levelup_cooker_1.label_20_niveaux"), 105, 140, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.adjustable_work.levelup_cooker_1.label_30_niveaux"), 204, 140, -12829636);
 	}
 
 	@Override
@@ -99,7 +102,7 @@ public class LevelupCooker1Screen extends AbstractContainerScreen<LevelupCooker1
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 15, this.topPos + 23, 61, 20, Component.literal("Basique"), e -> {
+		button_basique = new Button(this.leftPos + 15, this.topPos + 23, 61, 20, Component.translatable("gui.adjustable_work.levelup_cooker_1.button_basique"), e -> {
 			if (CookerLevel1buttonProcedure.execute(entity)) {
 				AdjustableWorkMod.PACKET_HANDLER.sendToServer(new LevelupCooker1ButtonMessage(0, x, y, z));
 				LevelupCooker1ButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -110,8 +113,10 @@ public class LevelupCooker1Screen extends AbstractContainerScreen<LevelupCooker1
 				if (CookerLevel1buttonProcedure.execute(entity))
 					super.render(ms, gx, gy, ticks);
 			}
-		});
-		this.addRenderableWidget(new Button(this.leftPos + 105, this.topPos + 23, 56, 20, Component.literal("Avancé"), e -> {
+		};
+		guistate.put("button:button_basique", button_basique);
+		this.addRenderableWidget(button_basique);
+		button_avance = new Button(this.leftPos + 105, this.topPos + 23, 56, 20, Component.translatable("gui.adjustable_work.levelup_cooker_1.button_avance"), e -> {
 			if (CookerLevel2buttonProcedure.execute(entity)) {
 				AdjustableWorkMod.PACKET_HANDLER.sendToServer(new LevelupCooker1ButtonMessage(1, x, y, z));
 				LevelupCooker1ButtonMessage.handleButtonAction(entity, 1, x, y, z);
@@ -122,8 +127,10 @@ public class LevelupCooker1Screen extends AbstractContainerScreen<LevelupCooker1
 				if (CookerLevel2buttonProcedure.execute(entity))
 					super.render(ms, gx, gy, ticks);
 			}
-		});
-		this.addRenderableWidget(new Button(this.leftPos + 186, this.topPos + 23, 88, 20, Component.literal("Profesionnel"), e -> {
+		};
+		guistate.put("button:button_avance", button_avance);
+		this.addRenderableWidget(button_avance);
+		button_profesionnel = new Button(this.leftPos + 186, this.topPos + 23, 88, 20, Component.translatable("gui.adjustable_work.levelup_cooker_1.button_profesionnel"), e -> {
 			if (CookerLevel3buttonProcedure.execute(entity)) {
 				AdjustableWorkMod.PACKET_HANDLER.sendToServer(new LevelupCooker1ButtonMessage(2, x, y, z));
 				LevelupCooker1ButtonMessage.handleButtonAction(entity, 2, x, y, z);
@@ -134,12 +141,16 @@ public class LevelupCooker1Screen extends AbstractContainerScreen<LevelupCooker1
 				if (CookerLevel3buttonProcedure.execute(entity))
 					super.render(ms, gx, gy, ticks);
 			}
-		});
-		this.addRenderableWidget(new Button(this.leftPos + 253, this.topPos + 155, 61, 20, Component.literal("Suivant"), e -> {
+		};
+		guistate.put("button:button_profesionnel", button_profesionnel);
+		this.addRenderableWidget(button_profesionnel);
+		button_suivant = new Button(this.leftPos + 253, this.topPos + 155, 61, 20, Component.translatable("gui.adjustable_work.levelup_cooker_1.button_suivant"), e -> {
 			if (true) {
 				AdjustableWorkMod.PACKET_HANDLER.sendToServer(new LevelupCooker1ButtonMessage(3, x, y, z));
 				LevelupCooker1ButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
-		}));
+		});
+		guistate.put("button:button_suivant", button_suivant);
+		this.addRenderableWidget(button_suivant);
 	}
 }

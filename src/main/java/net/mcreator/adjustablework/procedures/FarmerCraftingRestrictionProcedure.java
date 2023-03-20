@@ -28,56 +28,40 @@ public class FarmerCraftingRestrictionProcedure {
 	private static void execute(@Nullable Event event, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
-		if (itemstack.getItem() == Items.IRON_HOE || itemstack.getItem() == Items.GOLDEN_HOE || itemstack.getItem() == Items.STONE_HOE
-				|| itemstack.getItem() == Items.DIAMOND_HOE || itemstack.getItem() == Items.NETHERITE_HOE
+		if (itemstack.getItem() == Items.IRON_HOE || itemstack.getItem() == Items.GOLDEN_HOE || itemstack.getItem() == Items.STONE_HOE || itemstack.getItem() == Items.DIAMOND_HOE || itemstack.getItem() == Items.NETHERITE_HOE
 				|| itemstack.getItem() == Items.WOODEN_HOE) {
-			if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new AdjustableWorkModVariables.PlayerVariables())).FarmerLevel < 1
-					&& (itemstack.getItem() == Items.IRON_HOE || itemstack.getItem() == Items.GOLDEN_HOE || itemstack.getItem() == Items.STONE_HOE
-							|| itemstack.getItem() == Items.DIAMOND_HOE || itemstack.getItem() == Items.NETHERITE_HOE
-							|| itemstack.getItem() == Items.WOODEN_HOE)) {
+			if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AdjustableWorkModVariables.PlayerVariables())).FarmerLevel < 1 && (itemstack.getItem() == Items.IRON_HOE
+					|| itemstack.getItem() == Items.GOLDEN_HOE || itemstack.getItem() == Items.STONE_HOE || itemstack.getItem() == Items.DIAMOND_HOE || itemstack.getItem() == Items.NETHERITE_HOE || itemstack.getItem() == Items.WOODEN_HOE)) {
 				if (entity instanceof Player _player) {
 					ItemStack _stktoremove = (itemstack.copy());
-					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
-							_player.inventoryMenu.getCraftSlots());
+					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 				}
 			} else {
-				if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new AdjustableWorkModVariables.PlayerVariables())).FarmerLevel < 2
-						&& (itemstack.getItem() == Items.IRON_HOE || itemstack.getItem() == Items.GOLDEN_HOE
-								|| itemstack.getItem() == Items.DIAMOND_HOE || itemstack.getItem() == Items.NETHERITE_HOE)) {
+				if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AdjustableWorkModVariables.PlayerVariables())).FarmerLevel < 2
+						&& (itemstack.getItem() == Items.IRON_HOE || itemstack.getItem() == Items.GOLDEN_HOE || itemstack.getItem() == Items.DIAMOND_HOE || itemstack.getItem() == Items.NETHERITE_HOE)) {
 					if (entity instanceof Player _player) {
 						ItemStack _stktoremove = (itemstack.copy());
-						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
-								_player.inventoryMenu.getCraftSlots());
+						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 					}
 				} else {
-					if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-							.orElse(new AdjustableWorkModVariables.PlayerVariables())).FarmerLevel < 3
-							&& (itemstack.getItem() == Items.GOLDEN_HOE || itemstack.getItem() == Items.DIAMOND_HOE
-									|| itemstack.getItem() == Items.NETHERITE_HOE)) {
+					if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AdjustableWorkModVariables.PlayerVariables())).FarmerLevel < 3
+							&& (itemstack.getItem() == Items.GOLDEN_HOE || itemstack.getItem() == Items.DIAMOND_HOE || itemstack.getItem() == Items.NETHERITE_HOE)) {
 						if (entity instanceof Player _player) {
 							ItemStack _stktoremove = (itemstack.copy());
-							_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
-									_player.inventoryMenu.getCraftSlots());
+							_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 						}
 					} else {
-						if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-								.orElse(new AdjustableWorkModVariables.PlayerVariables())).FarmerLevel < 4
+						if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AdjustableWorkModVariables.PlayerVariables())).FarmerLevel < 4
 								&& (itemstack.getItem() == Items.GOLDEN_HOE || itemstack.getItem() == Items.NETHERITE_HOE)) {
 							if (entity instanceof Player _player) {
 								ItemStack _stktoremove = (itemstack.copy());
-								_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
-										_player.inventoryMenu.getCraftSlots());
+								_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 							}
 						} else {
-							if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-									.orElse(new AdjustableWorkModVariables.PlayerVariables())).FarmerLevel < 5
-									&& itemstack.getItem() == Items.GOLDEN_HOE) {
+							if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AdjustableWorkModVariables.PlayerVariables())).FarmerLevel < 5 && itemstack.getItem() == Items.GOLDEN_HOE) {
 								if (entity instanceof Player _player) {
 									ItemStack _stktoremove = (itemstack.copy());
-									_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
-											_player.inventoryMenu.getCraftSlots());
+									_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 								}
 							}
 						}

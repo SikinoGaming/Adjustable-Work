@@ -1,0 +1,7 @@
+{
+  "_fv": 39,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><xml xmlns=\"https://developers.google.com/blockly/xml\"><block deletable=\"false\" type=\"event_trigger\" x=\"40\" y=\"40\"><field name=\"trigger\">player_right_click_block</field><next><block type=\"controls_if\"><value name=\"IF0\"><block type=\"compare_blockstates\"><value name=\"a\"><block type=\"mcitem_allblocks\"><field name=\"value\">Blocks.SLIME_BLOCK</field></block></value><value name=\"b\"><block type=\"blockstate_from_deps\"/></value></block></value><statement name=\"DO0\"><block type=\"entity_close_gui\"><value name=\"entity\"><block type=\"entity_from_deps\"/></value></block></statement></block></next></block></xml>"
+  }
+}

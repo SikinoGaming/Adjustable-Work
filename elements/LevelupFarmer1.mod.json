@@ -1,5 +1,5 @@
 {
-  "_fv": 34,
+  "_fv": 39,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -15,6 +15,10 @@
         "data": {
           "image": "stone_hoe.png",
           "use1Xscale": true,
+<<<<<<< HEAD
+          "x": 74,
+          "y": 56
+=======
           "name": "stone_hoe.png",
           "x": 69,
           "y": 80
@@ -142,6 +146,7 @@
           "name": "Suivant",
           "x": 317,
           "y": 180
+>>>>>>> dd364527e756b377febbf3747bd6aa54bddc1abb
         }
       }
     ],

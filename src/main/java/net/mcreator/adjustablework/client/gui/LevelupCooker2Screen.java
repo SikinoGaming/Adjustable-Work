@@ -1,4 +1,3 @@
-
 package net.mcreator.adjustablework.client.gui;
 
 import net.minecraft.world.level.Level;
@@ -25,6 +24,8 @@ public class LevelupCooker2Screen extends AbstractContainerScreen<LevelupCooker2
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	Button button_divin;
+	Button button_retour;
 
 	public LevelupCooker2Screen(LevelupCooker2Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -76,7 +77,7 @@ public class LevelupCooker2Screen extends AbstractContainerScreen<LevelupCooker2
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "50 niveaux", 60, 127, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.adjustable_work.levelup_cooker_2.label_50_niveaux"), 60, 127, -12829636);
 	}
 
 	@Override
@@ -89,7 +90,7 @@ public class LevelupCooker2Screen extends AbstractContainerScreen<LevelupCooker2
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 61, this.topPos + 9, 51, 20, Component.literal("Divin"), e -> {
+		button_divin = new Button(this.leftPos + 61, this.topPos + 9, 51, 20, Component.translatable("gui.adjustable_work.levelup_cooker_2.button_divin"), e -> {
 			if (CookerLevel4buttonProcedure.execute(entity)) {
 				AdjustableWorkMod.PACKET_HANDLER.sendToServer(new LevelupCooker2ButtonMessage(0, x, y, z));
 				LevelupCooker2ButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -100,12 +101,16 @@ public class LevelupCooker2Screen extends AbstractContainerScreen<LevelupCooker2
 				if (CookerLevel4buttonProcedure.execute(entity))
 					super.render(ms, gx, gy, ticks);
 			}
-		});
-		this.addRenderableWidget(new Button(this.leftPos + 112, this.topPos + 140, 56, 20, Component.literal("Retour"), e -> {
+		};
+		guistate.put("button:button_divin", button_divin);
+		this.addRenderableWidget(button_divin);
+		button_retour = new Button(this.leftPos + 112, this.topPos + 140, 56, 20, Component.translatable("gui.adjustable_work.levelup_cooker_2.button_retour"), e -> {
 			if (true) {
 				AdjustableWorkMod.PACKET_HANDLER.sendToServer(new LevelupCooker2ButtonMessage(1, x, y, z));
 				LevelupCooker2ButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
-		}));
+		});
+		guistate.put("button:button_retour", button_retour);
+		this.addRenderableWidget(button_retour);
 	}
 }

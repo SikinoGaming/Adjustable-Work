@@ -8,7 +8,6 @@ public class CookerLevel2buttonProcedure {
 	public static boolean execute(Entity entity) {
 		if (entity == null)
 			return false;
-		return (entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new AdjustableWorkModVariables.PlayerVariables())).CookerLevel < 2;
+		return (entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AdjustableWorkModVariables.PlayerVariables())).CookerLevel < 2;
 	}
 }

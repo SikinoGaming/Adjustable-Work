@@ -8,7 +8,6 @@ public class MineLevel3buttonProcedure {
 	public static boolean execute(Entity entity) {
 		if (entity == null)
 			return false;
-		return (entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new AdjustableWorkModVariables.PlayerVariables())).MinerLevel < 3;
+		return (entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AdjustableWorkModVariables.PlayerVariables())).MinerLevel < 3;
 	}
 }

@@ -75,7 +75,6 @@ public class LevelupMiner2ButtonMessage {
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		AdjustableWorkMod.addNetworkMessage(LevelupMiner2ButtonMessage.class, LevelupMiner2ButtonMessage::buffer, LevelupMiner2ButtonMessage::new,
-				LevelupMiner2ButtonMessage::handler);
+		AdjustableWorkMod.addNetworkMessage(LevelupMiner2ButtonMessage.class, LevelupMiner2ButtonMessage::buffer, LevelupMiner2ButtonMessage::new, LevelupMiner2ButtonMessage::handler);
 	}
 }

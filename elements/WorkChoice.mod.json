@@ -1,5 +1,5 @@
 {
-  "_fv": 34,
+  "_fv": 39,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -13,12 +13,14 @@
       {
         "type": "label",
         "data": {
-          "text": "Séléctionne ton métier :",
+          "name": "label_selectionne_ton_metier",
+          "text": {
+            "fixedValue": "Séléctionne ton métier :"
+          },
           "color": {
             "value": -16777216,
             "falpha": 0.0
           },
-          "name": "Séléctionne ton métier :",
           "x": 150,
           "y": 53
         }
@@ -26,13 +28,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_mineur",
           "text": "  Mineur ",
           "onClick": {
             "name": "MinerJobAssignation"
           },
           "width": 71,
           "height": 20,
-          "name": "  Mineur ",
           "x": 231,
           "y": 71
         }
@@ -40,13 +42,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_fermier",
           "text": " Fermier ",
           "onClick": {
             "name": "FarmerJobAssignation"
           },
           "width": 71,
           "height": 20,
-          "name": " Fermier ",
           "x": 231,
           "y": 98
         }
@@ -54,13 +56,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_pecheur",
           "text": " Pêcheur ",
           "onClick": {
             "name": "FishermanJobAssignation"
           },
           "width": 71,
           "height": 20,
-          "name": " Pêcheur ",
           "x": 231,
           "y": 125
         }
@@ -68,13 +70,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_architecte",
           "text": "Architecte",
           "onClick": {
             "name": "ArchitectJobAssignation"
           },
           "width": 77,
           "height": 20,
-          "name": "Architecte",
           "x": 123,
           "y": 152
         }
@@ -82,13 +84,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_ingenieur",
           "text": "Ingénieur ",
           "onClick": {
             "name": "EngineerJobAssignation"
           },
           "width": 77,
           "height": 20,
-          "name": "Ingénieur ",
           "x": 123,
           "y": 125
         }
@@ -96,13 +98,21 @@
       {
         "type": "button",
         "data": {
+<<<<<<< HEAD
           "text": "Forgemage",
+=======
+          "name": "button_mage",
+          "text": "   Mage   ",
+>>>>>>> 5009a7deeb0a6065686337e3efde33b662380d4f
           "onClick": {
             "name": "MageJobAssignation"
           },
           "width": 76,
           "height": 20,
+<<<<<<< HEAD
           "name": "Forgemage",
+=======
+>>>>>>> 5009a7deeb0a6065686337e3efde33b662380d4f
           "x": 123,
           "y": 98
         }
@@ -110,13 +120,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_cuisinier",
           "text": "Cuisinier ",
           "onClick": {
             "name": "CookerJobAsignation"
           },
           "width": 77,
           "height": 20,
-          "name": "Cuisinier ",
           "x": 123,
           "y": 71
         }
@@ -124,13 +134,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_agent",
           "text": "  Agent  ",
           "onClick": {
             "name": "AgentJobAssignation"
           },
           "width": 71,
           "height": 20,
-          "name": "  Agent  ",
           "x": 231,
           "y": 152
         }

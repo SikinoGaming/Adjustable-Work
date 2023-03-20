@@ -896,11 +896,41 @@
       "name": "CookerCraftingModdedRestrictions",
       "type": "procedure",
       "sortid": 49,
-      "compiles": true,
+      "compiles": false,
       "locked_code": true,
       "registry_name": "cooker_crafting_modded_restrictions",
       "metadata": {
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Restrictions/Cooker"
+    },
+    {
+      "name": "LetsCook",
+      "type": "procedure",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lets_cook",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/Restrictions/Cooker"
     }

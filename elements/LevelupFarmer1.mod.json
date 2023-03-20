@@ -1,5 +1,5 @@
 {
-  "_fv": 34,
+  "_fv": 39,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -15,7 +15,6 @@
         "data": {
           "image": "stone_hoe.png",
           "use1Xscale": true,
-          "name": "stone_hoe.png",
           "x": 74,
           "y": 56
         }

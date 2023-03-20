@@ -58,7 +58,6 @@ public class OpenWorkGuiMessage {
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		AdjustableWorkMod.addNetworkMessage(OpenWorkGuiMessage.class, OpenWorkGuiMessage::buffer, OpenWorkGuiMessage::new,
-				OpenWorkGuiMessage::handler);
+		AdjustableWorkMod.addNetworkMessage(OpenWorkGuiMessage.class, OpenWorkGuiMessage::buffer, OpenWorkGuiMessage::new, OpenWorkGuiMessage::handler);
 	}
 }

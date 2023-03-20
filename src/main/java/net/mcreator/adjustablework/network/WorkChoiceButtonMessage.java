@@ -105,7 +105,6 @@ public class WorkChoiceButtonMessage {
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		AdjustableWorkMod.addNetworkMessage(WorkChoiceButtonMessage.class, WorkChoiceButtonMessage::buffer, WorkChoiceButtonMessage::new,
-				WorkChoiceButtonMessage::handler);
+		AdjustableWorkMod.addNetworkMessage(WorkChoiceButtonMessage.class, WorkChoiceButtonMessage::buffer, WorkChoiceButtonMessage::new, WorkChoiceButtonMessage::handler);
 	}
 }

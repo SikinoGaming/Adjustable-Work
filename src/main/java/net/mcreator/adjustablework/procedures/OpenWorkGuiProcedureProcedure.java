@@ -23,8 +23,7 @@ public class OpenWorkGuiProcedureProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (("Cooker").equals((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new AdjustableWorkModVariables.PlayerVariables())).Work)) {
+		if (("Cooker").equals((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AdjustableWorkModVariables.PlayerVariables())).Work)) {
 			if (entity instanceof Player _player)
 				_player.closeContainer();
 			{

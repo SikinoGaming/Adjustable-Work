@@ -1,5 +1,5 @@
 {
-  "_fv": 34,
+  "_fv": 39,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -15,7 +15,6 @@
         "data": {
           "image": "pomme_en_or1.png",
           "use1Xscale": true,
-          "name": "pomme_en_or1.png",
           "x": 171,
           "y": 73
         }
@@ -23,6 +22,7 @@
       {
         "type": "button",
         "data": {
+          "name": "button_divin",
           "text": "Divin",
           "onClick": {
             "name": "CookerLevel4"
@@ -32,7 +32,6 @@
           },
           "width": 51,
           "height": 20,
-          "name": "Divin",
           "x": 187,
           "y": 46
         }
@@ -40,12 +39,14 @@
       {
         "type": "label",
         "data": {
-          "text": "50 niveaux",
+          "name": "label_50_niveaux",
+          "text": {
+            "fixedValue": "50 niveaux"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "50 niveaux",
           "x": 186,
           "y": 164
         }
@@ -53,13 +54,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_retour",
           "text": "Retour",
           "onClick": {
             "name": "PreviousPageCooker"
           },
           "width": 56,
           "height": 20,
-          "name": "Retour",
           "x": 238,
           "y": 177
         }

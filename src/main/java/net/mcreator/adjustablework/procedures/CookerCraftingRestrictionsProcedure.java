@@ -28,69 +28,48 @@ public class CookerCraftingRestrictionsProcedure {
 	private static void execute(@Nullable Event event, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
-		if (("Cooker")
-				.equals((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new AdjustableWorkModVariables.PlayerVariables())).Work)
-				&& (itemstack.getItem() == Items.BREAD || itemstack.getItem() == Items.SUSPICIOUS_STEW || itemstack.getItem() == Items.COOKIE
-						|| itemstack.getItem() == Items.PUMPKIN_PIE || itemstack.getItem() == Items.GOLDEN_CARROT || itemstack.getItem() == Items.CAKE
-						|| itemstack.getItem() == Items.GOLDEN_APPLE || itemstack.getItem() == Items.MUSHROOM_STEW
-						|| itemstack.getItem() == Items.RABBIT_STEW)) {
-			if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new AdjustableWorkModVariables.PlayerVariables())).CookerLevel < 1
-					&& (itemstack.getItem() == Items.BREAD || itemstack.getItem() == Items.SUSPICIOUS_STEW || itemstack.getItem() == Items.COOKIE
-							|| itemstack.getItem() == Items.PUMPKIN_PIE || itemstack.getItem() == Items.GOLDEN_CARROT
-							|| itemstack.getItem() == Items.CAKE || itemstack.getItem() == Items.GOLDEN_APPLE
-							|| itemstack.getItem() == Items.MUSHROOM_STEW || itemstack.getItem() == Items.RABBIT_STEW)) {
+		if (("Cooker").equals((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AdjustableWorkModVariables.PlayerVariables())).Work)
+				&& (itemstack.getItem() == Items.BREAD || itemstack.getItem() == Items.SUSPICIOUS_STEW || itemstack.getItem() == Items.COOKIE || itemstack.getItem() == Items.PUMPKIN_PIE || itemstack.getItem() == Items.GOLDEN_CARROT
+						|| itemstack.getItem() == Items.CAKE || itemstack.getItem() == Items.GOLDEN_APPLE || itemstack.getItem() == Items.MUSHROOM_STEW || itemstack.getItem() == Items.RABBIT_STEW)) {
+			if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AdjustableWorkModVariables.PlayerVariables())).CookerLevel < 1
+					&& (itemstack.getItem() == Items.BREAD || itemstack.getItem() == Items.SUSPICIOUS_STEW || itemstack.getItem() == Items.COOKIE || itemstack.getItem() == Items.PUMPKIN_PIE || itemstack.getItem() == Items.GOLDEN_CARROT
+							|| itemstack.getItem() == Items.CAKE || itemstack.getItem() == Items.GOLDEN_APPLE || itemstack.getItem() == Items.MUSHROOM_STEW || itemstack.getItem() == Items.RABBIT_STEW)) {
 				if (entity instanceof Player _player) {
 					ItemStack _stktoremove = (itemstack.copy());
-					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
-							_player.inventoryMenu.getCraftSlots());
+					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 				}
 			} else {
-				if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new AdjustableWorkModVariables.PlayerVariables())).CookerLevel < 2
-						&& (itemstack.getItem() == Items.SUSPICIOUS_STEW || itemstack.getItem() == Items.COOKIE
-								|| itemstack.getItem() == Items.PUMPKIN_PIE || itemstack.getItem() == Items.GOLDEN_CARROT
-								|| itemstack.getItem() == Items.CAKE || itemstack.getItem() == Items.GOLDEN_APPLE
-								|| itemstack.getItem() == Items.MUSHROOM_STEW || itemstack.getItem() == Items.RABBIT_STEW)) {
+				if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AdjustableWorkModVariables.PlayerVariables())).CookerLevel < 2
+						&& (itemstack.getItem() == Items.SUSPICIOUS_STEW || itemstack.getItem() == Items.COOKIE || itemstack.getItem() == Items.PUMPKIN_PIE || itemstack.getItem() == Items.GOLDEN_CARROT || itemstack.getItem() == Items.CAKE
+								|| itemstack.getItem() == Items.GOLDEN_APPLE || itemstack.getItem() == Items.MUSHROOM_STEW || itemstack.getItem() == Items.RABBIT_STEW)) {
 					if (entity instanceof Player _player) {
 						ItemStack _stktoremove = (itemstack.copy());
-						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
-								_player.inventoryMenu.getCraftSlots());
+						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 					}
 				} else {
-					if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-							.orElse(new AdjustableWorkModVariables.PlayerVariables())).CookerLevel < 3
-							&& (itemstack.getItem() == Items.COOKIE || itemstack.getItem() == Items.PUMPKIN_PIE
-									|| itemstack.getItem() == Items.GOLDEN_CARROT || itemstack.getItem() == Items.GOLDEN_APPLE
-									|| itemstack.getItem() == Items.CAKE)) {
+					if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AdjustableWorkModVariables.PlayerVariables())).CookerLevel < 3
+							&& (itemstack.getItem() == Items.COOKIE || itemstack.getItem() == Items.PUMPKIN_PIE || itemstack.getItem() == Items.GOLDEN_CARROT || itemstack.getItem() == Items.GOLDEN_APPLE || itemstack.getItem() == Items.CAKE)) {
 						if (entity instanceof Player _player) {
 							ItemStack _stktoremove = (itemstack.copy());
-							_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
-									_player.inventoryMenu.getCraftSlots());
+							_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 						}
 					} else {
-						if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-								.orElse(new AdjustableWorkModVariables.PlayerVariables())).CookerLevel < 4
+						if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AdjustableWorkModVariables.PlayerVariables())).CookerLevel < 4
 								&& (itemstack.getItem() == Items.GOLDEN_CARROT || itemstack.getItem() == Items.GOLDEN_APPLE)) {
 							if (entity instanceof Player _player) {
 								ItemStack _stktoremove = (itemstack.copy());
-								_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
-										_player.inventoryMenu.getCraftSlots());
+								_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 							}
 						}
 					}
 				}
 			}
 		} else {
-			if (itemstack.getItem() == Items.BREAD || itemstack.getItem() == Items.SUSPICIOUS_STEW || itemstack.getItem() == Items.COOKIE
-					|| itemstack.getItem() == Items.PUMPKIN_PIE || itemstack.getItem() == Items.GOLDEN_CARROT || itemstack.getItem() == Items.CAKE
-					|| itemstack.getItem() == Items.GOLDEN_APPLE || itemstack.getItem() == Items.MUSHROOM_STEW
-					|| itemstack.getItem() == Items.RABBIT_STEW) {
+			if (itemstack.getItem() == Items.BREAD || itemstack.getItem() == Items.SUSPICIOUS_STEW || itemstack.getItem() == Items.COOKIE || itemstack.getItem() == Items.PUMPKIN_PIE || itemstack.getItem() == Items.GOLDEN_CARROT
+					|| itemstack.getItem() == Items.CAKE || itemstack.getItem() == Items.GOLDEN_APPLE || itemstack.getItem() == Items.MUSHROOM_STEW || itemstack.getItem() == Items.RABBIT_STEW) {
 				if (entity instanceof Player _player) {
 					ItemStack _stktoremove = (itemstack.copy());
-					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
-							_player.inventoryMenu.getCraftSlots());
+					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 				}
 			}
 		}

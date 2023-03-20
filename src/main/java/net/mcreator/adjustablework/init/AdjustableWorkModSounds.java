@@ -15,6 +15,5 @@ import net.mcreator.adjustablework.AdjustableWorkMod;
 
 public class AdjustableWorkModSounds {
 	public static final DeferredRegister<SoundEvent> REGISTRY = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, AdjustableWorkMod.MODID);
-	public static final RegistryObject<SoundEvent> HEARTBEATPULSE = REGISTRY.register("heartbeatpulse",
-			() -> new SoundEvent(new ResourceLocation("adjustable_work", "heartbeatpulse")));
+	public static final RegistryObject<SoundEvent> HEARTBEATPULSE = REGISTRY.register("heartbeatpulse", () -> new SoundEvent(new ResourceLocation("adjustable_work", "heartbeatpulse")));
 }

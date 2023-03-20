@@ -21,16 +21,10 @@ import net.mcreator.adjustablework.AdjustableWorkMod;
 
 public class AdjustableWorkModMenus {
 	public static final DeferredRegister<MenuType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.MENU_TYPES, AdjustableWorkMod.MODID);
-	public static final RegistryObject<MenuType<WorkChoiceMenu>> WORK_CHOICE = REGISTRY.register("work_choice",
-			() -> IForgeMenuType.create(WorkChoiceMenu::new));
-	public static final RegistryObject<MenuType<LevelupCooker1Menu>> LEVELUP_COOKER_1 = REGISTRY.register("levelup_cooker_1",
-			() -> IForgeMenuType.create(LevelupCooker1Menu::new));
-	public static final RegistryObject<MenuType<LevelupCooker2Menu>> LEVELUP_COOKER_2 = REGISTRY.register("levelup_cooker_2",
-			() -> IForgeMenuType.create(LevelupCooker2Menu::new));
-	public static final RegistryObject<MenuType<LevelupMiner1Menu>> LEVELUP_MINER_1 = REGISTRY.register("levelup_miner_1",
-			() -> IForgeMenuType.create(LevelupMiner1Menu::new));
-	public static final RegistryObject<MenuType<LevelupMiner2Menu>> LEVELUP_MINER_2 = REGISTRY.register("levelup_miner_2",
-			() -> IForgeMenuType.create(LevelupMiner2Menu::new));
-	public static final RegistryObject<MenuType<LevelupFarmer1Menu>> LEVELUP_FARMER_1 = REGISTRY.register("levelup_farmer_1",
-			() -> IForgeMenuType.create(LevelupFarmer1Menu::new));
+	public static final RegistryObject<MenuType<WorkChoiceMenu>> WORK_CHOICE = REGISTRY.register("work_choice", () -> IForgeMenuType.create(WorkChoiceMenu::new));
+	public static final RegistryObject<MenuType<LevelupCooker1Menu>> LEVELUP_COOKER_1 = REGISTRY.register("levelup_cooker_1", () -> IForgeMenuType.create(LevelupCooker1Menu::new));
+	public static final RegistryObject<MenuType<LevelupCooker2Menu>> LEVELUP_COOKER_2 = REGISTRY.register("levelup_cooker_2", () -> IForgeMenuType.create(LevelupCooker2Menu::new));
+	public static final RegistryObject<MenuType<LevelupMiner1Menu>> LEVELUP_MINER_1 = REGISTRY.register("levelup_miner_1", () -> IForgeMenuType.create(LevelupMiner1Menu::new));
+	public static final RegistryObject<MenuType<LevelupMiner2Menu>> LEVELUP_MINER_2 = REGISTRY.register("levelup_miner_2", () -> IForgeMenuType.create(LevelupMiner2Menu::new));
+	public static final RegistryObject<MenuType<LevelupFarmer1Menu>> LEVELUP_FARMER_1 = REGISTRY.register("levelup_farmer_1", () -> IForgeMenuType.create(LevelupFarmer1Menu::new));
 }

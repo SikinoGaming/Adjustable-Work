@@ -1,4 +1,3 @@
-
 package net.mcreator.adjustablework.client.gui;
 
 import net.minecraft.world.level.Level;
@@ -24,6 +23,14 @@ public class WorkChoiceScreen extends AbstractContainerScreen<WorkChoiceMenu> {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	Button button_mineur;
+	Button button_fermier;
+	Button button_pecheur;
+	Button button_architecte;
+	Button button_ingenieur;
+	Button button_mage;
+	Button button_cuisinier;
+	Button button_agent;
 
 	public WorkChoiceScreen(WorkChoiceMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -71,7 +78,7 @@ public class WorkChoiceScreen extends AbstractContainerScreen<WorkChoiceMenu> {
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "S\u00E9l\u00E9ctionne ton m\u00E9tier :", 56, 18, -16777216);
+		this.font.draw(poseStack, Component.translatable("gui.adjustable_work.work_choice.label_selectionne_ton_metier"), 56, 18, -16777216);
 	}
 
 	@Override
@@ -84,53 +91,69 @@ public class WorkChoiceScreen extends AbstractContainerScreen<WorkChoiceMenu> {
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 137, this.topPos + 36, 71, 20, Component.literal("  Mineur "), e -> {
+		button_mineur = new Button(this.leftPos + 137, this.topPos + 36, 71, 20, Component.translatable("gui.adjustable_work.work_choice.button_mineur"), e -> {
 			if (true) {
 				AdjustableWorkMod.PACKET_HANDLER.sendToServer(new WorkChoiceButtonMessage(0, x, y, z));
 				WorkChoiceButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 137, this.topPos + 63, 71, 20, Component.literal(" Fermier "), e -> {
+		});
+		guistate.put("button:button_mineur", button_mineur);
+		this.addRenderableWidget(button_mineur);
+		button_fermier = new Button(this.leftPos + 137, this.topPos + 63, 71, 20, Component.translatable("gui.adjustable_work.work_choice.button_fermier"), e -> {
 			if (true) {
 				AdjustableWorkMod.PACKET_HANDLER.sendToServer(new WorkChoiceButtonMessage(1, x, y, z));
 				WorkChoiceButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 137, this.topPos + 90, 71, 20, Component.literal(" Pêcheur "), e -> {
+		});
+		guistate.put("button:button_fermier", button_fermier);
+		this.addRenderableWidget(button_fermier);
+		button_pecheur = new Button(this.leftPos + 137, this.topPos + 90, 71, 20, Component.translatable("gui.adjustable_work.work_choice.button_pecheur"), e -> {
 			if (true) {
 				AdjustableWorkMod.PACKET_HANDLER.sendToServer(new WorkChoiceButtonMessage(2, x, y, z));
 				WorkChoiceButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 29, this.topPos + 117, 77, 20, Component.literal("Architecte"), e -> {
+		});
+		guistate.put("button:button_pecheur", button_pecheur);
+		this.addRenderableWidget(button_pecheur);
+		button_architecte = new Button(this.leftPos + 29, this.topPos + 117, 77, 20, Component.translatable("gui.adjustable_work.work_choice.button_architecte"), e -> {
 			if (true) {
 				AdjustableWorkMod.PACKET_HANDLER.sendToServer(new WorkChoiceButtonMessage(3, x, y, z));
 				WorkChoiceButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 29, this.topPos + 90, 77, 20, Component.literal("Ingénieur "), e -> {
+		});
+		guistate.put("button:button_architecte", button_architecte);
+		this.addRenderableWidget(button_architecte);
+		button_ingenieur = new Button(this.leftPos + 29, this.topPos + 90, 77, 20, Component.translatable("gui.adjustable_work.work_choice.button_ingenieur"), e -> {
 			if (true) {
 				AdjustableWorkMod.PACKET_HANDLER.sendToServer(new WorkChoiceButtonMessage(4, x, y, z));
 				WorkChoiceButtonMessage.handleButtonAction(entity, 4, x, y, z);
 			}
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 29, this.topPos + 63, 76, 20, Component.literal("   Mage   "), e -> {
+		});
+		guistate.put("button:button_ingenieur", button_ingenieur);
+		this.addRenderableWidget(button_ingenieur);
+		button_mage = new Button(this.leftPos + 29, this.topPos + 63, 76, 20, Component.translatable("gui.adjustable_work.work_choice.button_mage"), e -> {
 			if (true) {
 				AdjustableWorkMod.PACKET_HANDLER.sendToServer(new WorkChoiceButtonMessage(5, x, y, z));
 				WorkChoiceButtonMessage.handleButtonAction(entity, 5, x, y, z);
 			}
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 29, this.topPos + 36, 77, 20, Component.literal("Cuisinier "), e -> {
+		});
+		guistate.put("button:button_mage", button_mage);
+		this.addRenderableWidget(button_mage);
+		button_cuisinier = new Button(this.leftPos + 29, this.topPos + 36, 77, 20, Component.translatable("gui.adjustable_work.work_choice.button_cuisinier"), e -> {
 			if (true) {
 				AdjustableWorkMod.PACKET_HANDLER.sendToServer(new WorkChoiceButtonMessage(6, x, y, z));
 				WorkChoiceButtonMessage.handleButtonAction(entity, 6, x, y, z);
 			}
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 137, this.topPos + 117, 71, 20, Component.literal("  Agent  "), e -> {
+		});
+		guistate.put("button:button_cuisinier", button_cuisinier);
+		this.addRenderableWidget(button_cuisinier);
+		button_agent = new Button(this.leftPos + 137, this.topPos + 117, 71, 20, Component.translatable("gui.adjustable_work.work_choice.button_agent"), e -> {
 			if (true) {
 				AdjustableWorkMod.PACKET_HANDLER.sendToServer(new WorkChoiceButtonMessage(7, x, y, z));
 				WorkChoiceButtonMessage.handleButtonAction(entity, 7, x, y, z);
 			}
-		}));
+		});
+		guistate.put("button:button_agent", button_agent);
+		this.addRenderableWidget(button_agent);
 	}
 }

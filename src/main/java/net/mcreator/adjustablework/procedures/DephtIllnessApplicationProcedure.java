@@ -37,103 +37,75 @@ public class DephtIllnessApplicationProcedure {
 		if (entity == null)
 			return;
 		if (entity.getY() < 45) {
-			if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new AdjustableWorkModVariables.PlayerVariables())).MinerLevel < 1) {
+			if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AdjustableWorkModVariables.PlayerVariables())).MinerLevel < 1) {
 				if (entity instanceof LivingEntity _entity)
 					_entity.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 40, 1, (false), (false)));
-				if (30 <= AdjustableWorkModVariables.MapVariables.get(world).TickDephtIllnessCooldown
-						&& !(entity.getDisplayName().getString()).equals("Lucrenne")) {
+				if (30 <= AdjustableWorkModVariables.MapVariables.get(world).TickDephtIllnessCooldown && !(entity.getDisplayName().getString()).equals("Lucrenne")) {
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
-							_level.playSound(null, new BlockPos(entity.getX(), entity.getY(), entity.getZ()),
-									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("adjustable_work:heartbeatpulse")),
-									SoundSource.AMBIENT, 1, 1);
+							_level.playSound(null, new BlockPos(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("adjustable_work:heartbeatpulse")), SoundSource.AMBIENT, 1, 1);
 						} else {
-							_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()),
-									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("adjustable_work:heartbeatpulse")),
-									SoundSource.AMBIENT, 1, 1, false);
+							_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("adjustable_work:heartbeatpulse")), SoundSource.AMBIENT, 1, 1, false);
 						}
 					}
 					AdjustableWorkModVariables.MapVariables.get(world).TickDephtIllnessCooldown = 0;
 					AdjustableWorkModVariables.MapVariables.get(world).syncData(world);
 				} else {
-					AdjustableWorkModVariables.MapVariables.get(world).TickDephtIllnessCooldown = 1
-							+ AdjustableWorkModVariables.MapVariables.get(world).TickDephtIllnessCooldown;
+					AdjustableWorkModVariables.MapVariables.get(world).TickDephtIllnessCooldown = 1 + AdjustableWorkModVariables.MapVariables.get(world).TickDephtIllnessCooldown;
 					AdjustableWorkModVariables.MapVariables.get(world).syncData(world);
 				}
 			} else {
-				if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new AdjustableWorkModVariables.PlayerVariables())).MinerLevel < 2 && entity.getY() < 15) {
+				if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AdjustableWorkModVariables.PlayerVariables())).MinerLevel < 2 && entity.getY() < 15) {
 					if (entity instanceof LivingEntity _entity)
 						_entity.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 40, 1, (false), (false)));
-					if (30 <= AdjustableWorkModVariables.MapVariables.get(world).TickDephtIllnessCooldown
-							&& !(entity.getDisplayName().getString()).equals("Lucrenne")) {
+					if (30 <= AdjustableWorkModVariables.MapVariables.get(world).TickDephtIllnessCooldown && !(entity.getDisplayName().getString()).equals("Lucrenne")) {
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, new BlockPos(entity.getX(), entity.getY(), entity.getZ()),
-										ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("adjustable_work:heartbeatpulse")),
-										SoundSource.AMBIENT, 1, 1);
+								_level.playSound(null, new BlockPos(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("adjustable_work:heartbeatpulse")), SoundSource.AMBIENT, 1, 1);
 							} else {
-								_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()),
-										ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("adjustable_work:heartbeatpulse")),
-										SoundSource.AMBIENT, 1, 1, false);
+								_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("adjustable_work:heartbeatpulse")), SoundSource.AMBIENT, 1, 1, false);
 							}
 						}
 						AdjustableWorkModVariables.MapVariables.get(world).TickDephtIllnessCooldown = 0;
 						AdjustableWorkModVariables.MapVariables.get(world).syncData(world);
 					} else {
-						AdjustableWorkModVariables.MapVariables.get(world).TickDephtIllnessCooldown = 1
-								+ AdjustableWorkModVariables.MapVariables.get(world).TickDephtIllnessCooldown;
+						AdjustableWorkModVariables.MapVariables.get(world).TickDephtIllnessCooldown = 1 + AdjustableWorkModVariables.MapVariables.get(world).TickDephtIllnessCooldown;
 						AdjustableWorkModVariables.MapVariables.get(world).syncData(world);
 					}
 				} else {
-					if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-							.orElse(new AdjustableWorkModVariables.PlayerVariables())).MinerLevel < 3 && entity.getY() < -15) {
+					if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AdjustableWorkModVariables.PlayerVariables())).MinerLevel < 3 && entity.getY() < -15) {
 						if (entity instanceof LivingEntity _entity)
 							_entity.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 40, 1, (false), (false)));
-						if (30 <= AdjustableWorkModVariables.MapVariables.get(world).TickDephtIllnessCooldown
-								&& !(entity.getDisplayName().getString()).equals("Lucrenne")) {
+						if (30 <= AdjustableWorkModVariables.MapVariables.get(world).TickDephtIllnessCooldown && !(entity.getDisplayName().getString()).equals("Lucrenne")) {
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
-									_level.playSound(null, new BlockPos(entity.getX(), entity.getY(), entity.getZ()),
-											ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("adjustable_work:heartbeatpulse")),
-											SoundSource.AMBIENT, 1, 1);
+									_level.playSound(null, new BlockPos(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("adjustable_work:heartbeatpulse")), SoundSource.AMBIENT, 1, 1);
 								} else {
-									_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()),
-											ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("adjustable_work:heartbeatpulse")),
-											SoundSource.AMBIENT, 1, 1, false);
+									_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("adjustable_work:heartbeatpulse")), SoundSource.AMBIENT, 1, 1, false);
 								}
 							}
 							AdjustableWorkModVariables.MapVariables.get(world).TickDephtIllnessCooldown = 0;
 							AdjustableWorkModVariables.MapVariables.get(world).syncData(world);
 						} else {
-							AdjustableWorkModVariables.MapVariables.get(world).TickDephtIllnessCooldown = 1
-									+ AdjustableWorkModVariables.MapVariables.get(world).TickDephtIllnessCooldown;
+							AdjustableWorkModVariables.MapVariables.get(world).TickDephtIllnessCooldown = 1 + AdjustableWorkModVariables.MapVariables.get(world).TickDephtIllnessCooldown;
 							AdjustableWorkModVariables.MapVariables.get(world).syncData(world);
 						}
 					} else {
-						if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-								.orElse(new AdjustableWorkModVariables.PlayerVariables())).MinerLevel < 4 && entity.getY() < -45) {
+						if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AdjustableWorkModVariables.PlayerVariables())).MinerLevel < 4 && entity.getY() < -45) {
 							if (entity instanceof LivingEntity _entity)
 								_entity.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 40, 1, (false), (false)));
-							if (30 <= AdjustableWorkModVariables.MapVariables.get(world).TickDephtIllnessCooldown
-									&& !(entity.getDisplayName().getString()).equals("Lucrenne")) {
+							if (30 <= AdjustableWorkModVariables.MapVariables.get(world).TickDephtIllnessCooldown && !(entity.getDisplayName().getString()).equals("Lucrenne")) {
 								if (world instanceof Level _level) {
 									if (!_level.isClientSide()) {
-										_level.playSound(null, new BlockPos(entity.getX(), entity.getY(), entity.getZ()),
-												ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("adjustable_work:heartbeatpulse")),
-												SoundSource.AMBIENT, 1, 1);
+										_level.playSound(null, new BlockPos(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("adjustable_work:heartbeatpulse")), SoundSource.AMBIENT, 1, 1);
 									} else {
-										_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()),
-												ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("adjustable_work:heartbeatpulse")),
-												SoundSource.AMBIENT, 1, 1, false);
+										_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("adjustable_work:heartbeatpulse")), SoundSource.AMBIENT, 1, 1, false);
 									}
 								}
 								AdjustableWorkModVariables.MapVariables.get(world).TickDephtIllnessCooldown = 0;
 								AdjustableWorkModVariables.MapVariables.get(world).syncData(world);
 							} else {
-								AdjustableWorkModVariables.MapVariables.get(world).TickDephtIllnessCooldown = 1
-										+ AdjustableWorkModVariables.MapVariables.get(world).TickDephtIllnessCooldown;
+								AdjustableWorkModVariables.MapVariables.get(world).TickDephtIllnessCooldown = 1 + AdjustableWorkModVariables.MapVariables.get(world).TickDephtIllnessCooldown;
 								AdjustableWorkModVariables.MapVariables.get(world).syncData(world);
 							}
 						}

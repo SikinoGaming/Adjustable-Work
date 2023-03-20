@@ -1,5 +1,5 @@
 {
-  "_fv": 34,
+  "_fv": 39,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -15,7 +15,6 @@
         "data": {
           "image": "stone_pickaxe1.png",
           "use1Xscale": true,
-          "name": "stone_pickaxe1.png",
           "x": 60,
           "y": 80
         }
@@ -23,12 +22,14 @@
       {
         "type": "label",
         "data": {
-          "text": "10 niveaux",
+          "name": "label_10_niveaux",
+          "text": {
+            "fixedValue": "10 niveaux"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "10 niveaux",
           "x": 78,
           "y": 170
         }
@@ -36,6 +37,7 @@
       {
         "type": "button",
         "data": {
+          "name": "button_basique",
           "text": "Basique",
           "onClick": {
             "name": "MinerLevel1"
@@ -45,7 +47,6 @@
           },
           "width": 61,
           "height": 20,
-          "name": "Basique",
           "x": 78,
           "y": 53
         }
@@ -55,7 +56,6 @@
         "data": {
           "image": "iron_pickaxe1.png",
           "use1Xscale": true,
-          "name": "iron_pickaxe1.png",
           "x": 150,
           "y": 80
         }
@@ -63,6 +63,7 @@
       {
         "type": "button",
         "data": {
+          "name": "button_avance",
           "text": "Avancé",
           "onClick": {
             "name": "MinerLevel2"
@@ -72,7 +73,6 @@
           },
           "width": 56,
           "height": 20,
-          "name": "Avancé",
           "x": 168,
           "y": 53
         }
@@ -80,12 +80,14 @@
       {
         "type": "label",
         "data": {
-          "text": "20 niveaux",
+          "name": "label_20_niveaux",
+          "text": {
+            "fixedValue": "20 niveaux"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "20 niveaux",
           "x": 168,
           "y": 170
         }
@@ -95,7 +97,6 @@
         "data": {
           "image": "diamond_pickaxe1.png",
           "use1Xscale": true,
-          "name": "diamond_pickaxe1.png",
           "x": 249,
           "y": 80
         }
@@ -103,6 +104,7 @@
       {
         "type": "button",
         "data": {
+          "name": "button_professionel",
           "text": "Professionel",
           "onClick": {
             "name": "MinerLevel3"
@@ -112,7 +114,6 @@
           },
           "width": 88,
           "height": 20,
-          "name": "Professionel",
           "x": 249,
           "y": 53
         }
@@ -120,12 +121,14 @@
       {
         "type": "label",
         "data": {
-          "text": "30 niveaux",
+          "name": "label_30_niveaux",
+          "text": {
+            "fixedValue": "30 niveaux"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "30 niveaux",
           "x": 263,
           "y": 170
         }
@@ -133,13 +136,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_suivant",
           "text": "suivant",
           "onClick": {
             "name": "NextPageMiner"
           },
           "width": 56,
           "height": 20,
-          "name": "suivant",
           "x": 313,
           "y": 181
         }

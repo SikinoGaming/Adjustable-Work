@@ -3,73 +3,48 @@ package net.mcreator.adjustablework.procedures;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.player.PlayerEvent;
+import net.minecraftforge.event.TickEvent;
 
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
-
-import net.mcreator.adjustablework.network.AdjustableWorkModVariables;
+import net.minecraft.core.BlockPos;
 
 import javax.annotation.Nullable;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.registries.ForgeRegistries;
 
 @Mod.EventBusSubscriber
-public class MinerSmeltingRestrictionsProcedure {
+public class CookerCraftingModdedRestrictionsProcedure {
 	@SubscribeEvent
-	public static void onItemSmelted(PlayerEvent.ItemSmeltedEvent event) {
-		execute(event, event.getEntity(), event.getSmelting());
-	}
-
-	public static void execute(Entity entity, ItemStack itemstack) {
-		execute(null, entity, itemstack);
-	}
-
-	private static void execute(@Nullable Event event, Entity entity, ItemStack itemstack) {
-		if (entity == null)
-			return;
-		if (itemstack.getItem() == Items.IRON_INGOT || itemstack.getItem() == Items.GOLD_INGOT || itemstack.getItem() == Items.COAL
-				|| itemstack.getItem() == Items.DIAMOND || itemstack.getItem() == Items.LAPIS_LAZULI || itemstack.getItem() == Items.NETHERITE_SCRAP
-				|| itemstack.getItem() == Items.COPPER_INGOT) {
-			if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new AdjustableWorkModVariables.PlayerVariables())).MinerLevel < 1) {
-				if (entity instanceof Player _player) {
-					ItemStack _stktoremove = (itemstack.copy());
-					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
-							_player.inventoryMenu.getCraftSlots());
-				}
-			} else {
-				if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new AdjustableWorkModVariables.PlayerVariables())).MinerLevel < 2
-						&& (itemstack.getItem() == Items.GOLD_INGOT || itemstack.getItem() == Items.DIAMOND
-								|| itemstack.getItem() == Items.LAPIS_LAZULI || itemstack.getItem() == Items.NETHERITE_SCRAP)) {
-					if (entity instanceof Player _player) {
-						ItemStack _stktoremove = (itemstack.copy());
-						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
-								_player.inventoryMenu.getCraftSlots());
-					}
-				} else {
-					if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-							.orElse(new AdjustableWorkModVariables.PlayerVariables())).MinerLevel < 3
-							&& (itemstack.getItem() == Items.DIAMOND || itemstack.getItem() == Items.NETHERITE_SCRAP)) {
-						if (entity instanceof Player _player) {
-							ItemStack _stktoremove = (itemstack.copy());
-							_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
-									_player.inventoryMenu.getCraftSlots());
-						}
-					} else {
-						if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-								.orElse(new AdjustableWorkModVariables.PlayerVariables())).MinerLevel < 4
-								&& itemstack.getItem() == Items.NETHERITE_SCRAP) {
-							if (entity instanceof Player _player) {
-								ItemStack _stktoremove = (itemstack.copy());
-								_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
-										_player.inventoryMenu.getCraftSlots());
-							}
-						}
-					}
-				}
-			}
+	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
+		if (event.phase == TickEvent.Phase.END) {
+			execute(event, event.player.level, event.player);
 		}
 	}
+
+	public static void execute(LevelAccessor world, Entity entity) {
+		execute(null, world, entity);
+	}
+
+	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
+		if (entity == null)
+			return;
+		/*if ((world.getBlockState(new BlockPos(
+				entity.level.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(5)),
+						ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX(),
+				entity.level.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(5)),
+						ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY(),
+				entity.level.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(5)),
+						ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ())))
+				.getBlock().getRegistryName().equals(new ResourceLocation("minecraft", "diamond_ore"))) {
+			if (entity instanceof Player _player)
+				_player.closeContainer();
+		}*/
+	}
+
 }

@@ -85,7 +85,6 @@ public class LevelupCooker1ButtonMessage {
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		AdjustableWorkMod.addNetworkMessage(LevelupCooker1ButtonMessage.class, LevelupCooker1ButtonMessage::buffer, LevelupCooker1ButtonMessage::new,
-				LevelupCooker1ButtonMessage::handler);
+		AdjustableWorkMod.addNetworkMessage(LevelupCooker1ButtonMessage.class, LevelupCooker1ButtonMessage::buffer, LevelupCooker1ButtonMessage::new, LevelupCooker1ButtonMessage::handler);
 	}
 }

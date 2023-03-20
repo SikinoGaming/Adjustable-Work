@@ -1,4 +1,3 @@
-
 package net.mcreator.adjustablework.client.gui;
 
 import net.minecraft.world.level.Level;
@@ -25,6 +24,8 @@ public class LevelupMiner2Screen extends AbstractContainerScreen<LevelupMiner2Me
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	Button button_divin;
+	Button button_retour;
 
 	public LevelupMiner2Screen(LevelupMiner2Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -76,7 +77,7 @@ public class LevelupMiner2Screen extends AbstractContainerScreen<LevelupMiner2Me
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "50 niveaux", 123, 135, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.adjustable_work.levelup_miner_2.label_50_niveaux"), 123, 135, -12829636);
 	}
 
 	@Override
@@ -89,7 +90,7 @@ public class LevelupMiner2Screen extends AbstractContainerScreen<LevelupMiner2Me
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 123, this.topPos + 18, 51, 20, Component.literal("Divin"), e -> {
+		button_divin = new Button(this.leftPos + 123, this.topPos + 18, 51, 20, Component.translatable("gui.adjustable_work.levelup_miner_2.button_divin"), e -> {
 			if (MinerLevel4buttonProcedure.execute(entity)) {
 				AdjustableWorkMod.PACKET_HANDLER.sendToServer(new LevelupMiner2ButtonMessage(0, x, y, z));
 				LevelupMiner2ButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -100,12 +101,16 @@ public class LevelupMiner2Screen extends AbstractContainerScreen<LevelupMiner2Me
 				if (MinerLevel4buttonProcedure.execute(entity))
 					super.render(ms, gx, gy, ticks);
 			}
-		});
-		this.addRenderableWidget(new Button(this.leftPos + 258, this.topPos + 144, 56, 20, Component.literal("Retour"), e -> {
+		};
+		guistate.put("button:button_divin", button_divin);
+		this.addRenderableWidget(button_divin);
+		button_retour = new Button(this.leftPos + 258, this.topPos + 144, 56, 20, Component.translatable("gui.adjustable_work.levelup_miner_2.button_retour"), e -> {
 			if (true) {
 				AdjustableWorkMod.PACKET_HANDLER.sendToServer(new LevelupMiner2ButtonMessage(1, x, y, z));
 				LevelupMiner2ButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
-		}));
+		});
+		guistate.put("button:button_retour", button_retour);
+		this.addRenderableWidget(button_retour);
 	}
 }

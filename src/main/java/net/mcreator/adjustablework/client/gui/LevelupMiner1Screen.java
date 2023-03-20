@@ -1,4 +1,3 @@
-
 package net.mcreator.adjustablework.client.gui;
 
 import net.minecraft.world.level.Level;
@@ -27,6 +26,10 @@ public class LevelupMiner1Screen extends AbstractContainerScreen<LevelupMiner1Me
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	Button button_basique;
+	Button button_avance;
+	Button button_professionel;
+	Button button_suivant;
 
 	public LevelupMiner1Screen(LevelupMiner1Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -84,9 +87,9 @@ public class LevelupMiner1Screen extends AbstractContainerScreen<LevelupMiner1Me
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "10 niveaux", 24, 135, -12829636);
-		this.font.draw(poseStack, "20 niveaux", 114, 135, -12829636);
-		this.font.draw(poseStack, "30 niveaux", 209, 135, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.adjustable_work.levelup_miner_1.label_10_niveaux"), 24, 135, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.adjustable_work.levelup_miner_1.label_20_niveaux"), 114, 135, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.adjustable_work.levelup_miner_1.label_30_niveaux"), 209, 135, -12829636);
 	}
 
 	@Override
@@ -99,7 +102,7 @@ public class LevelupMiner1Screen extends AbstractContainerScreen<LevelupMiner1Me
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 24, this.topPos + 18, 61, 20, Component.literal("Basique"), e -> {
+		button_basique = new Button(this.leftPos + 24, this.topPos + 18, 61, 20, Component.translatable("gui.adjustable_work.levelup_miner_1.button_basique"), e -> {
 			if (MinerLevel1buttonProcedure.execute(entity)) {
 				AdjustableWorkMod.PACKET_HANDLER.sendToServer(new LevelupMiner1ButtonMessage(0, x, y, z));
 				LevelupMiner1ButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -110,8 +113,10 @@ public class LevelupMiner1Screen extends AbstractContainerScreen<LevelupMiner1Me
 				if (MinerLevel1buttonProcedure.execute(entity))
 					super.render(ms, gx, gy, ticks);
 			}
-		});
-		this.addRenderableWidget(new Button(this.leftPos + 114, this.topPos + 18, 56, 20, Component.literal("Avancé"), e -> {
+		};
+		guistate.put("button:button_basique", button_basique);
+		this.addRenderableWidget(button_basique);
+		button_avance = new Button(this.leftPos + 114, this.topPos + 18, 56, 20, Component.translatable("gui.adjustable_work.levelup_miner_1.button_avance"), e -> {
 			if (MinerLevel2buttonProcedure.execute(entity)) {
 				AdjustableWorkMod.PACKET_HANDLER.sendToServer(new LevelupMiner1ButtonMessage(1, x, y, z));
 				LevelupMiner1ButtonMessage.handleButtonAction(entity, 1, x, y, z);
@@ -122,8 +127,10 @@ public class LevelupMiner1Screen extends AbstractContainerScreen<LevelupMiner1Me
 				if (MinerLevel2buttonProcedure.execute(entity))
 					super.render(ms, gx, gy, ticks);
 			}
-		});
-		this.addRenderableWidget(new Button(this.leftPos + 195, this.topPos + 18, 88, 20, Component.literal("Professionel"), e -> {
+		};
+		guistate.put("button:button_avance", button_avance);
+		this.addRenderableWidget(button_avance);
+		button_professionel = new Button(this.leftPos + 195, this.topPos + 18, 88, 20, Component.translatable("gui.adjustable_work.levelup_miner_1.button_professionel"), e -> {
 			if (MineLevel3buttonProcedure.execute(entity)) {
 				AdjustableWorkMod.PACKET_HANDLER.sendToServer(new LevelupMiner1ButtonMessage(2, x, y, z));
 				LevelupMiner1ButtonMessage.handleButtonAction(entity, 2, x, y, z);
@@ -134,12 +141,16 @@ public class LevelupMiner1Screen extends AbstractContainerScreen<LevelupMiner1Me
 				if (MineLevel3buttonProcedure.execute(entity))
 					super.render(ms, gx, gy, ticks);
 			}
-		});
-		this.addRenderableWidget(new Button(this.leftPos + 259, this.topPos + 146, 56, 20, Component.literal("suivant"), e -> {
+		};
+		guistate.put("button:button_professionel", button_professionel);
+		this.addRenderableWidget(button_professionel);
+		button_suivant = new Button(this.leftPos + 259, this.topPos + 146, 56, 20, Component.translatable("gui.adjustable_work.levelup_miner_1.button_suivant"), e -> {
 			if (true) {
 				AdjustableWorkMod.PACKET_HANDLER.sendToServer(new LevelupMiner1ButtonMessage(3, x, y, z));
 				LevelupMiner1ButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
-		}));
+		});
+		guistate.put("button:button_suivant", button_suivant);
+		this.addRenderableWidget(button_suivant);
 	}
 }

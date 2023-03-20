@@ -9,7 +9,9 @@ public class FarmerLevel3Procedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity instanceof Player _plr ? _plr.experienceLevel : 0) >= 30) {
+		if (((entity instanceof Player _plr ? _plr.experienceLevel : 0) >= 30) == (2 == (entity
+				.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new AdjustableWorkModVariables.PlayerVariables())).FarmerLevel)) {
 			if (entity instanceof Player _player)
 				_player.giveExperienceLevels(-(30));
 			{

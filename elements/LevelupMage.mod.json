@@ -1,0 +1,102 @@
+{
+  "_fv": 34,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 320,
+    "height": 170,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "index.png",
+          "use1Xscale": true,
+          "name": "index.png",
+          "x": 78,
+          "y": 88
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Débutant",
+          "onClick": {
+            "name": "MageLevel1"
+          },
+          "displayCondition": {
+            "name": "MageLevel1button"
+          },
+          "width": 67,
+          "height": 20,
+          "name": "Débutant",
+          "x": 83,
+          "y": 47
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "10 niveaux",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "10 niveaux",
+          "x": 92,
+          "y": 178
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "table_denchantement.png",
+          "use1Xscale": true,
+          "name": "table_denchantement.png",
+          "x": 175,
+          "y": 64
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "30 niveaux",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "30 niveaux",
+          "x": 204,
+          "y": 178
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Avancé",
+          "onClick": {
+            "name": "MageLevel2"
+          },
+          "displayCondition": {
+            "name": "MageLevel2button"
+          },
+          "width": 56,
+          "height": 20,
+          "name": "Avancé",
+          "x": 203,
+          "y": 47
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

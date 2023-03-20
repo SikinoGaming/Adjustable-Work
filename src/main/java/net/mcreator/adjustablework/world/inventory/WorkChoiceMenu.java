@@ -13,6 +13,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.adjustablework.procedures.LoopProcedure;
 import net.mcreator.adjustablework.init.AdjustableWorkModMenus;
 
 import java.util.function.Supplier;
@@ -50,6 +51,12 @@ public class WorkChoiceMenu extends AbstractContainerMenu implements Supplier<Ma
 	@Override
 	public ItemStack quickMoveStack(Player playerIn, int index) {
 		return ItemStack.EMPTY;
+	}
+
+	@Override
+	public void removed(Player playerIn) {
+		super.removed(playerIn);
+		LoopProcedure.execute(world, x, y, z, entity);
 	}
 
 	public Map<Integer, Slot> get() {

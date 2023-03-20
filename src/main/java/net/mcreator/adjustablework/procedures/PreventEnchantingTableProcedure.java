@@ -3,13 +3,11 @@ package net.mcreator.adjustablework.procedures;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.ClipContext;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.core.BlockPos;
 
@@ -20,31 +18,27 @@ import javax.annotation.Nullable;
 @Mod.EventBusSubscriber
 public class PreventEnchantingTableProcedure {
 	@SubscribeEvent
-	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
-		if (event.phase == TickEvent.Phase.END) {
-			execute(event, event.player.level, event.player);
-		}
+	public static void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
+		if (event.getHand() != event.getEntity().getUsedItemHand())
+			return;
+		execute(event, event.getLevel(), event.getPos().getX(), event.getPos().getY(), event.getPos().getZ(), event.getEntity());
 	}
 
-	public static void execute(LevelAccessor world, Entity entity) {
-		execute(null, world, entity);
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+		execute(null, world, x, y, z, entity);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
+	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
 		if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new AdjustableWorkModVariables.PlayerVariables())).MageLevel < 2
-				&& Blocks.BREWING_STAND.asItem() == (new ItemStack((world.getBlockState(new BlockPos(
-						entity.level.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(5)),
-								ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX(),
-						entity.level.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(5)),
-								ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY(),
-						entity.level.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(5)),
-								ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ())))
-						.getBlock())).getItem()) {
-			if (entity instanceof Player _player)
-				_player.closeContainer();
+				&& (world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.BREWING_STAND) {
+			{
+				BlockPos _pos = new BlockPos(x, y, z);
+				Block.dropResources(world.getBlockState(_pos), world, new BlockPos(x, y, z), null);
+				world.destroyBlock(_pos, false);
+			}
 		}
 	}
 }

@@ -1123,12 +1123,136 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
         ]
       },
       "path": "~/Restrictions/Mage"
+    },
+    {
+      "name": "PreventEnchantingTable",
+      "type": "procedure",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "prevent_enchanting_table",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Restrictions/Mage"
+    },
+    {
+      "name": "LevelupMage",
+      "type": "gui",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "levelup_mage",
+      "path": "~/LevelUpArborescence/Mage/Gui"
+    },
+    {
+      "name": "MageLevel1",
+      "type": "procedure",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mage_level_1",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/LevelUpArborescence/Mage"
+    },
+    {
+      "name": "MageLevel2",
+      "type": "procedure",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mage_level_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/LevelUpArborescence/Mage"
+    },
+    {
+      "name": "MageLevel1button",
+      "type": "procedure",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mage_level_1button",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/LevelUpArborescence/Mage"
+    },
+    {
+      "name": "MageLevel2button",
+      "type": "procedure",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mage_level_2button",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/LevelUpArborescence/Mage"
     }
   ],
   "variable_elements": [
@@ -1200,6 +1324,12 @@
     },
     {
       "name": "ShiftIsActive",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "PlayerHoldHoe",
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
@@ -1288,6 +1418,15 @@
                 "children": []
               }
             ]
+          },
+          {
+            "name": "Mage",
+            "children": [
+              {
+                "name": "Gui",
+                "children": []
+              }
+            ]
           }
         ]
       },
@@ -1310,11 +1449,13 @@
     "modid": "adjustable_work",
     "modName": "Adjustable_Work",
     "version": "1.0.0",
+    "description": "Marquer : Je suis gay vous permet de devenir op",
     "author": "Stephane, MCreator",
     "websiteURL": "https://mcreator.net",
     "license": "Academic Free License v3.0",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
+    "modPicture": "chaaat",
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],

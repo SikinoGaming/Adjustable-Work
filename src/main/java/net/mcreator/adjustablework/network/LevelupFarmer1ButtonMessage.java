@@ -12,6 +12,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.adjustablework.world.inventory.LevelupFarmer1Menu;
+import net.mcreator.adjustablework.procedures.NextPageFarmerProcedure;
 import net.mcreator.adjustablework.procedures.FarmerLevel3Procedure;
 import net.mcreator.adjustablework.procedures.FarmerLevel2Procedure;
 import net.mcreator.adjustablework.procedures.FarmerLevel1Procedure;
@@ -75,6 +76,10 @@ public class LevelupFarmer1ButtonMessage {
 		if (buttonID == 2) {
 
 			FarmerLevel3Procedure.execute(entity);
+		}
+		if (buttonID == 3) {
+
+			NextPageFarmerProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

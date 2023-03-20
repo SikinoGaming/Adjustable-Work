@@ -88,7 +88,6 @@ public class AdjustableWorkModVariables {
 			clone.FishermanLevel = original.FishermanLevel;
 			clone.AgentLevel = original.AgentLevel;
 			clone.EngineerLevel = original.EngineerLevel;
-			clone.ShiftIsActive = original.ShiftIsActive;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -270,7 +269,6 @@ public class AdjustableWorkModVariables {
 		public double FishermanLevel = 0;
 		public double AgentLevel = 0;
 		public double EngineerLevel = 0;
-		public boolean ShiftIsActive = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -288,7 +286,6 @@ public class AdjustableWorkModVariables {
 			nbt.putDouble("FishermanLevel", FishermanLevel);
 			nbt.putDouble("AgentLevel", AgentLevel);
 			nbt.putDouble("EngineerLevel", EngineerLevel);
-			nbt.putBoolean("ShiftIsActive", ShiftIsActive);
 			return nbt;
 		}
 
@@ -303,7 +300,6 @@ public class AdjustableWorkModVariables {
 			FishermanLevel = nbt.getDouble("FishermanLevel");
 			AgentLevel = nbt.getDouble("AgentLevel");
 			EngineerLevel = nbt.getDouble("EngineerLevel");
-			ShiftIsActive = nbt.getBoolean("ShiftIsActive");
 		}
 	}
 
@@ -338,7 +334,6 @@ public class AdjustableWorkModVariables {
 					variables.FishermanLevel = message.data.FishermanLevel;
 					variables.AgentLevel = message.data.AgentLevel;
 					variables.EngineerLevel = message.data.EngineerLevel;
-					variables.ShiftIsActive = message.data.ShiftIsActive;
 				}
 			});
 			context.setPacketHandled(true);

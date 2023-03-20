@@ -136,6 +136,10 @@ public class LevelupFarmer1Screen extends AbstractContainerScreen<LevelupFarmer1
 			}
 		});
 		this.addRenderableWidget(new Button(this.leftPos + 263, this.topPos + 145, 51, 20, Component.literal("Suivant"), e -> {
+			if (true) {
+				AdjustableWorkMod.PACKET_HANDLER.sendToServer(new LevelupFarmer1ButtonMessage(3, x, y, z));
+				LevelupFarmer1ButtonMessage.handleButtonAction(entity, 3, x, y, z);
+			}
 		}));
 	}
 }

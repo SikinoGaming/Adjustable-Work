@@ -32,17 +32,30 @@ public class FarmerCultivatingRestrictionProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.WOODEN_HOE
-				|| (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.STONE_HOE
-				|| (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.DIAMOND_HOE
-				|| (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.GOLDEN_HOE
-				|| (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.IRON_HOE
-				|| (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.NETHERITE_HOE) {
+		if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new AdjustableWorkModVariables.PlayerVariables())).FarmerLevel < 1) {
+			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.WOODEN_HOE
+					|| (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.STONE_HOE
+					|| (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.DIAMOND_HOE
+					|| (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.GOLDEN_HOE
+					|| (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.IRON_HOE
+					|| (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.NETHERITE_HOE) {
+				if (entity instanceof Player _player) {
+					ItemStack _stktoremove = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY);
+					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
+							_player.inventoryMenu.getCraftSlots());
+				}
+			} else {
+				if (entity instanceof Player _player) {
+					ItemStack _stktoremove = (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY);
+					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
+							_player.inventoryMenu.getCraftSlots());
+				}
+			}
+		} else {
 			if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new AdjustableWorkModVariables.PlayerVariables())).FarmerLevel < 1) {
-				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.WOODEN_HOE
-						|| (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.STONE_HOE
-						|| (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.DIAMOND_HOE
+					.orElse(new AdjustableWorkModVariables.PlayerVariables())).FarmerLevel < 2) {
+				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.DIAMOND_HOE
 						|| (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.GOLDEN_HOE
 						|| (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.IRON_HOE
 						|| (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.NETHERITE_HOE) {
@@ -60,10 +73,9 @@ public class FarmerCultivatingRestrictionProcedure {
 				}
 			} else {
 				if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new AdjustableWorkModVariables.PlayerVariables())).FarmerLevel < 2) {
+						.orElse(new AdjustableWorkModVariables.PlayerVariables())).FarmerLevel < 3) {
 					if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.DIAMOND_HOE
 							|| (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.GOLDEN_HOE
-							|| (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.IRON_HOE
 							|| (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
 									.getItem() == Items.NETHERITE_HOE) {
 						if (entity instanceof Player _player) {
@@ -80,10 +92,8 @@ public class FarmerCultivatingRestrictionProcedure {
 					}
 				} else {
 					if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-							.orElse(new AdjustableWorkModVariables.PlayerVariables())).FarmerLevel < 3) {
-						if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.DIAMOND_HOE
-								|| (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
-										.getItem() == Items.GOLDEN_HOE
+							.orElse(new AdjustableWorkModVariables.PlayerVariables())).FarmerLevel < 4) {
+						if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.GOLDEN_HOE
 								|| (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
 										.getItem() == Items.NETHERITE_HOE) {
 							if (entity instanceof Player _player) {
@@ -100,10 +110,9 @@ public class FarmerCultivatingRestrictionProcedure {
 						}
 					} else {
 						if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-								.orElse(new AdjustableWorkModVariables.PlayerVariables())).FarmerLevel < 4) {
-							if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.GOLDEN_HOE
-									|| (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
-											.getItem() == Items.NETHERITE_HOE) {
+								.orElse(new AdjustableWorkModVariables.PlayerVariables())).FarmerLevel < 5) {
+							if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
+									.getItem() == Items.GOLDEN_HOE) {
 								if (entity instanceof Player _player) {
 									ItemStack _stktoremove = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY);
 									_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
@@ -114,28 +123,6 @@ public class FarmerCultivatingRestrictionProcedure {
 									ItemStack _stktoremove = (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY);
 									_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
 											_player.inventoryMenu.getCraftSlots());
-								}
-							}
-						} else {
-							if ((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-									.orElse(new AdjustableWorkModVariables.PlayerVariables())).FarmerLevel < 5) {
-								if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
-										.getItem() == Items.GOLDEN_HOE) {
-									if (entity instanceof Player _player) {
-										ItemStack _stktoremove = (entity instanceof LivingEntity _livEnt
-												? _livEnt.getMainHandItem()
-												: ItemStack.EMPTY);
-										_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
-												_player.inventoryMenu.getCraftSlots());
-									}
-								} else {
-									if (entity instanceof Player _player) {
-										ItemStack _stktoremove = (entity instanceof LivingEntity _livEnt
-												? _livEnt.getOffhandItem()
-												: ItemStack.EMPTY);
-										_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
-												_player.inventoryMenu.getCraftSlots());
-									}
 								}
 							}
 						}

@@ -49,6 +49,20 @@
           "x": 183,
           "y": 169
         }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Retour",
+          "onClick": {
+            "name": "PreviousPageFarmer"
+          },
+          "width": 56,
+          "height": 20,
+          "name": "Retour",
+          "x": 58,
+          "y": 178
+        }
       }
     ],
     "gridSettings": {

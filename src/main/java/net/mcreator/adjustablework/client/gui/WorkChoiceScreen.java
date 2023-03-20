@@ -114,7 +114,7 @@ public class WorkChoiceScreen extends AbstractContainerScreen<WorkChoiceMenu> {
 				WorkChoiceButtonMessage.handleButtonAction(entity, 4, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 29, this.topPos + 63, 76, 20, Component.literal("   Mage   "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 29, this.topPos + 63, 76, 20, Component.literal("Forgemage"), e -> {
 			if (true) {
 				AdjustableWorkMod.PACKET_HANDLER.sendToServer(new WorkChoiceButtonMessage(5, x, y, z));
 				WorkChoiceButtonMessage.handleButtonAction(entity, 5, x, y, z);

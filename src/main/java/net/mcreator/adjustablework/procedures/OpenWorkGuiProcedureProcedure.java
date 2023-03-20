@@ -14,6 +14,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.adjustablework.world.inventory.LevelupMiner1Menu;
+import net.mcreator.adjustablework.world.inventory.LevelupMageMenu;
 import net.mcreator.adjustablework.world.inventory.LevelupFarmer1Menu;
 import net.mcreator.adjustablework.world.inventory.LevelupCooker1Menu;
 import net.mcreator.adjustablework.network.AdjustableWorkModVariables;
@@ -84,6 +85,28 @@ public class OpenWorkGuiProcedureProcedure {
 									return new LevelupFarmer1Menu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 								}
 							}, _bpos);
+						}
+					}
+				} else {
+					if (("Mage").equals((entity.getCapability(AdjustableWorkModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new AdjustableWorkModVariables.PlayerVariables())).Work)) {
+						if (entity instanceof Player _player)
+							_player.closeContainer();
+						{
+							if (entity instanceof ServerPlayer _ent) {
+								BlockPos _bpos = new BlockPos(x, y, z);
+								NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+									@Override
+									public Component getDisplayName() {
+										return Component.literal("LevelupMage");
+									}
+
+									@Override
+									public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+										return new LevelupMageMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+									}
+								}, _bpos);
+							}
 						}
 					}
 				}

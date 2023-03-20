@@ -96,13 +96,13 @@
       {
         "type": "button",
         "data": {
-          "text": "   Mage   ",
+          "text": "Forgemage",
           "onClick": {
             "name": "MageJobAssignation"
           },
           "width": 76,
           "height": 20,
-          "name": "   Mage   ",
+          "name": "Forgemage",
           "x": 123,
           "y": 98
         }
@@ -136,6 +136,9 @@
         }
       }
     ],
+    "onClosed": {
+      "name": "Loop"
+    },
     "gridSettings": {
       "sx": 18,
       "sy": 18,

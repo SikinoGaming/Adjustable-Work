@@ -1123,6 +1123,18 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -1144,12 +1156,103 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
         ]
       },
       "path": "~/Restrictions/Mage"
+    },
+    {
+      "name": "LevelupMage",
+      "type": "gui",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "levelup_mage",
+      "path": "~/LevelUpArborescence/Mage/Gui"
+    },
+    {
+      "name": "MageLevel1",
+      "type": "procedure",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mage_level_1",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/LevelUpArborescence/Mage"
+    },
+    {
+      "name": "MageLevel2",
+      "type": "procedure",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mage_level_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/LevelUpArborescence/Mage"
+    },
+    {
+      "name": "MageLevel1button",
+      "type": "procedure",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mage_level_1button",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/LevelUpArborescence/Mage"
+    },
+    {
+      "name": "MageLevel2button",
+      "type": "procedure",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mage_level_2button",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/LevelUpArborescence/Mage"
     }
   ],
   "variable_elements": [
@@ -1303,6 +1406,15 @@
           },
           {
             "name": "Farmer",
+            "children": [
+              {
+                "name": "Gui",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Mage",
             "children": [
               {
                 "name": "Gui",

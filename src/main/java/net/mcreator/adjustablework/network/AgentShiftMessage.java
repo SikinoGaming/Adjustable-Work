@@ -10,31 +10,32 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.network.FriendlyByteBuf;
 
-import net.mcreator.adjustablework.procedures.OpenWorkGuiProcedureProcedure;
+import net.mcreator.adjustablework.procedures.ShiftClikingReleasingProcedure;
+import net.mcreator.adjustablework.procedures.ShiftClickingProcedure;
 import net.mcreator.adjustablework.AdjustableWorkMod;
 
 import java.util.function.Supplier;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class OpenWorkGuiMessage {
+public class AgentShiftMessage {
 	int type, pressedms;
 
-	public OpenWorkGuiMessage(int type, int pressedms) {
+	public AgentShiftMessage(int type, int pressedms) {
 		this.type = type;
 		this.pressedms = pressedms;
 	}
 
-	public OpenWorkGuiMessage(FriendlyByteBuf buffer) {
+	public AgentShiftMessage(FriendlyByteBuf buffer) {
 		this.type = buffer.readInt();
 		this.pressedms = buffer.readInt();
 	}
 
-	public static void buffer(OpenWorkGuiMessage message, FriendlyByteBuf buffer) {
+	public static void buffer(AgentShiftMessage message, FriendlyByteBuf buffer) {
 		buffer.writeInt(message.type);
 		buffer.writeInt(message.pressedms);
 	}
 
-	public static void handler(OpenWorkGuiMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
+	public static void handler(AgentShiftMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
 		NetworkEvent.Context context = contextSupplier.get();
 		context.enqueueWork(() -> {
 			pressAction(context.getSender(), message.type, message.pressedms);
@@ -52,12 +53,16 @@ public class OpenWorkGuiMessage {
 			return;
 		if (type == 0) {
 
-			OpenWorkGuiProcedureProcedure.execute(world, x, y, z, entity);
+			ShiftClickingProcedure.execute(entity);
+		}
+		if (type == 1) {
+
+			ShiftClikingReleasingProcedure.execute(entity);
 		}
 	}
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		AdjustableWorkMod.addNetworkMessage(OpenWorkGuiMessage.class, OpenWorkGuiMessage::buffer, OpenWorkGuiMessage::new, OpenWorkGuiMessage::handler);
+		AdjustableWorkMod.addNetworkMessage(AgentShiftMessage.class, AgentShiftMessage::buffer, AgentShiftMessage::new, AgentShiftMessage::handler);
 	}
 }

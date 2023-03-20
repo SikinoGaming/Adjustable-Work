@@ -8,11 +8,7 @@ version="1.0.0"
 displayName="Adjustable_Work"
 credits="Created using mod maker MCreator - https://mcreator.net/about"
 displayURL="https://mcreator.net"
-logoFile="logo.png"
 authors="Stephane, MCreator"
-description='''
-Marquer : Je suis gay vous permet de devenir op
-'''
 
 [[dependencies.adjustable_work]]
     modId="minecraft"

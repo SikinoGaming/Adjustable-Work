@@ -1205,9 +1205,9 @@
     "en_us": {
       "gui.adjustable_work.work_choice.button_ingenieur": "Ingénieur ",
       "item.adjustable_work.reset_job": "Reset Job",
-      "gui.adjustable_work.work_choice.button_mineur": "  Mineur ",
-      "gui.adjustable_work.levelup_miner_1.button_basique": "Basique",
       "gui.adjustable_work.levelup_miner_2.button_divin": "Divin",
+      "gui.adjustable_work.levelup_miner_1.button_basique": "Basique",
+      "gui.adjustable_work.work_choice.button_mineur": "  Mineur ",
       "gui.adjustable_work.levelup_miner_1.button_professionel": "Professionel",
       "gui.adjustable_work.levelup_cooker_1.label_30_niveaux": "30 niveaux",
       "gui.adjustable_work.work_choice.button_pecheur": " Pêcheur ",
@@ -1320,5 +1320,5 @@
     "modElementsPackage": "net.mcreator.adjustablework",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202200348217
+  "mcreatorVersion": 202300110610
 }

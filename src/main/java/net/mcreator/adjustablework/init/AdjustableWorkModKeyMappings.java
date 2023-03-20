@@ -15,28 +15,34 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.KeyMapping;
 
-import net.mcreator.adjustablework.network.OpenWorkGuiMessage;
+import net.mcreator.adjustablework.network.AgentShiftMessage;
 import net.mcreator.adjustablework.AdjustableWorkMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class AdjustableWorkModKeyMappings {
-	public static final KeyMapping OPEN_WORK_GUI = new KeyMapping("key.adjustable_work.open_work_gui", GLFW.GLFW_KEY_J, "key.categories.inventory") {
+	public static final KeyMapping AGENT_SHIFT = new KeyMapping("key.adjustable_work.agent_shift", GLFW.GLFW_KEY_LEFT_SHIFT, "key.categories.misc") {
 		private boolean isDownOld = false;
 
 		@Override
 		public void setDown(boolean isDown) {
 			super.setDown(isDown);
 			if (isDownOld != isDown && isDown) {
-				AdjustableWorkMod.PACKET_HANDLER.sendToServer(new OpenWorkGuiMessage(0, 0));
-				OpenWorkGuiMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+				AdjustableWorkMod.PACKET_HANDLER.sendToServer(new AgentShiftMessage(0, 0));
+				AgentShiftMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+				AGENT_SHIFT_LASTPRESS = System.currentTimeMillis();
+			} else if (isDownOld != isDown && !isDown) {
+				int dt = (int) (System.currentTimeMillis() - AGENT_SHIFT_LASTPRESS);
+				AdjustableWorkMod.PACKET_HANDLER.sendToServer(new AgentShiftMessage(1, dt));
+				AgentShiftMessage.pressAction(Minecraft.getInstance().player, 1, dt);
 			}
 			isDownOld = isDown;
 		}
 	};
+	private static long AGENT_SHIFT_LASTPRESS = 0;
 
 	@SubscribeEvent
 	public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
-		event.register(OPEN_WORK_GUI);
+		event.register(AGENT_SHIFT);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})
@@ -44,7 +50,7 @@ public class AdjustableWorkModKeyMappings {
 		@SubscribeEvent
 		public static void onClientTick(TickEvent.ClientTickEvent event) {
 			if (Minecraft.getInstance().screen == null) {
-				OPEN_WORK_GUI.consumeClick();
+				AGENT_SHIFT.consumeClick();
 			}
 		}
 	}
